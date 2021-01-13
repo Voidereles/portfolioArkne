@@ -212,6 +212,7 @@ body {
     background: radial-gradient(#C3D1E4 0%, #DDE7F3 78.9%, #D4E0ED 100%);
     position: relative;
     overflow: hidden;
+    max-height: 762px;
 
     &::after {
         background: radial-gradient(white 0%, transparent 100%);
@@ -290,9 +291,11 @@ body {
         // overflow: hidden;
         height: 100%;
         min-height: 100vh;
+        max-height: 762px;
 
         .row {
             min-height: 100vh;
+            max-height: 762px;
         }
     }
 
@@ -331,6 +334,7 @@ body {
         z-index: 4;
         padding: $space5XL;
         overflow: hidden;
+        max-height: 762px;
 
 
         &::before {

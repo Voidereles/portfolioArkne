@@ -33079,6 +33079,7 @@ body {
   background: radial-gradient(#C3D1E4 0%, #DDE7F3 78.9%, #D4E0ED 100%);
   position: relative;
   overflow: hidden;
+  max-height: 762px;
 }
 
 .about::after {
@@ -33159,10 +33160,12 @@ body {
   position: relative;
   height: 100%;
   min-height: 100vh;
+  max-height: 762px;
 }
 
 .about .container-fluid .row {
   min-height: 100vh;
+  max-height: 762px;
 }
 
 .about__text {
@@ -33204,6 +33207,7 @@ body {
   z-index: 4;
   padding: 128px;
   overflow: hidden;
+  max-height: 762px;
 }
 
 .about__img-container::before {
