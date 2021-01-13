@@ -322,8 +322,7 @@ body {
     &__img-container {
         // height: 700px;
         // max-height: 80vh;
-        top: 50%;
-        transform: translateY(-50%);
+        top: calc(50% - 50vh);
         right: calc(-7/12 * 100% + 2*128px);
         position: absolute;
         display: block;

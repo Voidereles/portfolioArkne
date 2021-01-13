@@ -3,6 +3,8 @@ import 'owl.carousel';
 import 'bootstrap';
 import PerfectScrollbar from 'perfect-scrollbar';
 import AOS from 'aos';
+import anime from 'animejs/lib/anime.es.js';
+
 AOS.init({
     duration: 700,
     // easing: 'cubic-bezier(.91, .11, .19, .92)'

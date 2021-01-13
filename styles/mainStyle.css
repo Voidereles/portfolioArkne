@@ -33195,9 +33195,7 @@ body {
 }
 
 .about__img-container {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: calc(50% - 50vh);
   right: calc(-7/12 * 100% + 2*128px);
   position: absolute;
   display: block;
