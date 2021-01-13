@@ -1,0 +1,15 @@
+<svg width="6.223mm" height="8.0437mm" version="1.1" viewBox="0 0 6.223 8.0437" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g transform="translate(-9.4933 -18.874)">
+  <path d="m9.4953 25.55h6.2167v1.3671h-6.2167z" fill="white" style="paint-order:normal"/>
+  <g>
+   <g transform="matrix(.26458 0 0 .26458 1.5314 -.67968)" aria-label="arkne">
+    <path fill="white" d="m53.612 96.662v-22.16h-4.16v3.12h-0.08c-1.6-2.44-4.44-3.72-7.52-3.72-7.96 0-11.76 6.36-11.76 11.76 0 5.84 4.28 11.56 11.76 11.56 3 0 5.92-1.28 7.52-4h0.08v3.44zm-4.08-11.04c0 4.24-3.36 7.8-7.72 7.8-4.4 0-7.56-3.8-7.56-7.8 0-3.48 2.48-7.92 7.6-7.92 4.28 0 7.68 3.2 7.68 7.92z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+    <path fill="white" d="m89.26 96.662v-12.12c0-3.16 1.12-4.84 2.44-5.56 1-0.52 2.36-0.8 3-0.8v-4.28c-1.04 0.04-3.88 0.12-5.64 2.6h-0.08v-2h-3.88v22.16z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+    <path fill="white" d="m85.1 74.502-7.88 10.68h-0.08v-18.12h-4.16v29.6h4.16v-11.48h0.08l8.88 11.48h5.2l-9.32-11.72 8.04-10.44z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+    <path fill="white" d="m114.1 96.662v-13.12c-0.04-2.48-0.52-4.24-1.4-5.68-1.6-2.48-4.4-3.96-7.84-3.96-0.88 0-4.24 0-6.48 2.96h-0.08v-2.36h-3.88v22.16h4.16v-12.08c0-4.44 2.36-6.88 5.84-6.88 5.52 0 5.52 5.2 5.52 6.92v12.04z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+    <path fill="white" d="m140.78 87.382c0.04-0.28 0.12-1.4 0.12-2.12-0.04-6.48-5.28-11.36-11.28-11.36-6.24 0-11.36 5-11.36 11.64 0 6.28 5 11.68 11.28 11.68 3.44 0 8.52-1.8 10.64-7.52h-4.16c-1 1.92-3.24 3.72-6.32 3.72-2.8 0-6.24-1.76-7.28-6.04zm-18.36-3.2c0.2-3.24 3.16-6.48 7.16-6.48s6.96 3.24 7.16 6.48z" style="font-feature-settings:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+   </g>
+  
+  </g>
+ </g>
+</svg>

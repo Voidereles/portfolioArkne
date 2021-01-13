@@ -1,0 +1,28 @@
+/* CSS HSL */
+/* SCSS HSL */
+/* SCSS Gradient */
+.color-blue {
+  color: #216096;
+}
+
+.color-white-shiny {
+  display: inline-block;
+  background: linear-gradient(45deg, #ccdee0 0%, #bbe6fb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.color-blue-shiny {
+  display: inline-block;
+  background: #216096;
+  background: radial-gradient(#a1b9ce -30%, #216096 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  position: relative;
+  z-index: 3;
+}
+/*# sourceMappingURL=colors.css.map */

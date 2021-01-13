@@ -1,0 +1,70 @@
+$classicBlue: rgb(15, 76, 129); //Although sapphires can come in many colors, this classic blue hue represents the most popular shade of sapphire gemstones. Like a boundless night sky opening up to infinite possibilities, this rich jewel tone pairs well with many other colors and styles.
+$flameScarlet: rgb(205, 33, 42); //This fiery orange-hued red exudes confidence, fun, and vivacity! A simple rose gold setting, like the delicate and gently tapering Elle Ring, highlights and complements the warm, vibrant color of this lab created fancy colored diamond.
+$saffron: rgb(255, 165, 0); //Named for the aromatic yellow spice, this punchy golden yellow color adds distinctive flavor to the 2020 color palette. Complete the sunny golden look by setting your saffron colored gemstone in a yellow gold diamond halo engagement ring, like the Waverly Diamond Ring.
+$grapeCompote: rgb(107, 88, 118); //A color that Pantone describes as both “mysterious” and “mellow,” this deep purple hue is perfectly embodied by an alexandrite gemstone. Alexandrite is known for having visual color changing properties when viewed under different types of light – shifting between bluish green to purplish red. This seemingly mystical stone is a great choice for anyone looking to make an eccentric statement!
+$pirateBlack: rgb(55, 56, 56);
+
+/* CSS HSL */
+// --azure-x-11-web-color: hsla(186, 25%, 84%, 1);
+// --white: hsla(0, 0%, 100%, 1);
+// --blue-sapphire: hsla(204, 39%, 33%, 1);
+// --prussian-blue: hsla(212, 49%, 17%, 1);
+// --prussian-blue-2: hsla(209, 49%, 19%, 1);
+// --prussian-blue-3: hsla(207, 51%, 22%, 1);
+// --yale-blue: hsla(208, 79%, 28%, 1);
+// --yale-blue-2: hsla(208, 79%, 28%, 1);
+// --blue-sapphire-2: hsla(200, 51%, 31%, 1);
+
+/* SCSS HSL */
+$azure-x-11-web-color: hsla(186, 25%, 84%, 1);
+$white: hsla(0, 0%, 100%, 1);
+$blue-sapphire: hsla(204, 39%, 33%, 1);
+$prussian-blue: hsla(212, 49%, 17%, 1);
+$prussian-blue-2: hsla(209, 49%, 19%, 1);
+$prussian-blue-3: hsla(207, 51%, 22%, 1);
+$yale-blue: hsla(208, 79%, 28%, 1);
+$yale-blue-2: hsla(208, 79%, 28%, 1);
+$blue-sapphire-2: hsla(200, 51%, 31%, 1);
+
+$main-blue: #216096;
+$close-white: #ECF3F9;
+
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #cddfe1ff, #fefefeff, #335a74ff, #162a41ff, #19324aff, #1b3a53ff, #0f4c81ff, #0f4b80ff, #265c76ff);
+$gradient-right: linear-gradient(90deg, #cddfe1ff, #fefefeff, #335a74ff, #162a41ff, #19324aff, #1b3a53ff, #0f4c81ff, #0f4b80ff, #265c76ff);
+$gradient-bottom: linear-gradient(180deg, #cddfe1ff, #fefefeff, #335a74ff, #162a41ff, #19324aff, #1b3a53ff, #0f4c81ff, #0f4b80ff, #265c76ff);
+$gradient-left: linear-gradient(270deg, #cddfe1ff, #fefefeff, #335a74ff, #162a41ff, #19324aff, #1b3a53ff, #0f4c81ff, #0f4b80ff, #265c76ff);
+$gradient-top-right: linear-gradient(45deg, #cddfe1ff, #fefefeff, #335a74ff, #162a41ff, #19324aff, #1b3a53ff, #0f4c81ff, #0f4b80ff, #265c76ff);
+$gradient-bottom-right: linear-gradient(135deg, #cddfe1ff, #fefefeff, #335a74ff, #162a41ff, #19324aff, #1b3a53ff, #0f4c81ff, #0f4b80ff, #265c76ff);
+$gradient-top-left: linear-gradient(225deg, #cddfe1ff, #fefefeff, #335a74ff, #162a41ff, #19324aff, #1b3a53ff, #0f4c81ff, #0f4b80ff, #265c76ff);
+$gradient-bottom-left: linear-gradient(315deg, #cddfe1ff, #fefefeff, #335a74ff, #162a41ff, #19324aff, #1b3a53ff, #0f4c81ff, #0f4b80ff, #265c76ff);
+$gradient-radial: radial-gradient(#cddfe1ff, #fefefeff, #335a74ff, #162a41ff, #19324aff, #1b3a53ff, #0f4c81ff, #0f4b80ff, #265c76ff);
+
+$forNeuromorphismButton:#b3cee5;
+
+.color-blue {
+    color: $main-blue;
+}
+
+.color-white-shiny {
+    display: inline-block;
+    background: linear-gradient(45deg, hsla(186, 25%, 84%, 1) 0%, hsl(200, 90%, 86%) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+}
+
+.color-blue-shiny {
+    display: inline-block;
+    background: #216096;
+    // background: radial-gradient(#216096 0%, #548caf 100%);
+    background: radial-gradient(#a1b9ce -30%, #216096 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    position: relative;
+    z-index: 3;
+}

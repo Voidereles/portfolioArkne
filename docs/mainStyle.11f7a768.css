@@ -1,0 +1,258 @@
+/* CSS HSL */
+/* SCSS HSL */
+/* SCSS Gradient */
+/* CSS HSL */
+/* SCSS HSL */
+/* SCSS Gradient */
+@font-face {
+  font-family: "Hurme";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/HurmeGeometricSans2-Bold.woff2") format("woff2"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/HurmeGeometricSans2-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avantGarde";
+  src: url("ITCAvantGardeGothicMedium.9d7418ac.otf");
+}
+body {
+  color: #373838;
+  font-family: sans-serif;
+}
+
+.container-fluid {
+  max-width: 1700px;
+}
+
+@keyframes logoBar {
+  from {
+    transform: translateX(-14px) scaleX(2);
+  }
+  to {
+    transform: translateX(0) scaleX(1);
+  }
+}
+@keyframes logoGroup {
+  from {
+    transform: matrix(1.5184, 0, 0, 1.5184, -50.064, -12.644);
+  }
+  to {
+    transforM: matrix(1.5184, 0, 0, 1.5184, -20.064, -12.644);
+  }
+}
+@keyframes sliderIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeInVid {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+@keyframes hr {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70px;
+  }
+}
+@keyframes hrOut {
+  from {
+    width: 70px;
+  }
+  to {
+    width: 0px;
+  }
+}
+@keyframes spark {
+  from {
+    clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.welcome {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.welcome::before {
+  content: "";
+  background: linear-gradient(45deg, #0f4c81 35%, white 100%);
+  animation: hueRotate 36s infinite alternate-reverse cubic-bezier(0.91, 0.11, 0.19, 0.92);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.5;
+}
+.welcome__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.welcome__container {
+  position: absolute;
+  z-index: 2;
+  font-family: "Hurme";
+  color: white;
+  bottom: 0;
+  padding: 72px;
+}
+.welcome__container hr {
+  background: #E0E0E2;
+  height: 2px;
+  border: none;
+  position: absolute;
+  width: 0;
+  animation: hr 1.3s 1.4s cubic-bezier(0.76, 0.01, 0.21, 1.02) forwards;
+}
+.welcome__logo {
+  max-width: 100%;
+  width: 500px;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+.welcome__logo-container {
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+}
+.welcome__logo-bar-helper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: black;
+  background: linear-gradient(45deg, #ccdee0 0%, #bbe6fb 100%);
+  z-index: 5;
+  width: 309px;
+  height: 35px;
+  max-width: 100%;
+  transform-origin: left;
+  transform: translateX(-14px) scaleX(2);
+  animation: logoBar 1.3s 0.4s cubic-bezier(0.76, 0.01, 0.21, 1) forwards, hueRotate 36s infinite alternate-reverse cubic-bezier(0.91, 0.11, 0.19, 0.92);
+}
+.welcome__logo-arkne path, .welcome__logo-group path {
+  fill: white;
+}
+.welcome__logo-group {
+  transforM: matrix(1.5184, 0, 0, 1.5184, -50.064, -12.644);
+  animation: logoGroup 1.3s 0.4s cubic-bezier(0.76, 0.01, 0.21, 1) forwards;
+}
+.welcome__logo-bar {
+  display: block;
+  width: 500px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+  transform: translateX(-14px) scaleX(2);
+  fill: transparent;
+}
+.welcome__heading {
+  color: white;
+  margin-top: 60px;
+  line-height: 30px;
+  font-weight: normal;
+  font-size: 18px;
+  opacity: 0;
+  margin-bottom: 30px;
+  -webkit-animation: fade 1s 1.9s forwards;
+  animation: fade 1s 1.9s forwards;
+  text-shadow: 0 1px 1px rgba(76, 76, 77, 0.72);
+}
+.welcome__contact {
+  opacity: 0;
+  animation: fade 1s 1.9s forwards;
+  -webkit-animation: fade 1s 2.9s forwards;
+  text-shadow: 0 1px 1px rgba(76, 76, 77, 0.72);
+}
+.welcome__mail {
+  text-decoration: none;
+}
+.welcome__mail:hover, .welcome__mail:active {
+  display: inline-block;
+  background: linear-gradient(45deg, #ccdee0 0%, #bbe6fb 100%);
+  background: -webkit-linear-gradient(45deg, #ccdee0 0%, #bbe6fb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  animation: hueRotate 36s infinite alternate-reverse cubic-bezier(0.91, 0.11, 0.19, 0.92);
+}
+.welcome__text-gradient, .welcome__mail {
+  display: inline-block;
+  background: linear-gradient(45deg, #ccdee0 0%, #bbe6fb 100%);
+  background: -webkit-linear-gradient(45deg, #ccdee0 0%, #bbe6fb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  animation: hueRotate 36s infinite alternate-reverse cubic-bezier(0.91, 0.11, 0.19, 0.92);
+}
+.welcome__arrow {
+  animation: fade 1.3s 2.7s cubic-bezier(0.76, 0.01, 0.21, 1.02) forwards;
+  transition: 400ms ease;
+  opacity: 0;
+}
+.welcome__arrow:hover {
+  transform: translateY(10px);
+}
+
+@keyframes hueRotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+@media (max-width: 992px) {
+  .welcome__container {
+    padding: 42px;
+  }
+}
+@media (min-width: 1600px) {
+  .welcome__container {
+    padding: 128px;
+  }
+}
+
+/*# sourceMappingURL=mainStyle.11f7a768.css.map */

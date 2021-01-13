@@ -1,0 +1,335 @@
+/* CSS HSL */
+/* SCSS HSL */
+/* SCSS Gradient */
+.color-blue {
+  color: #216096;
+}
+
+.color-white-shiny {
+  display: inline-block;
+  background: linear-gradient(45deg, #ccdee0 0%, #bbe6fb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.color-blue-shiny {
+  display: inline-block;
+  background: #216096;
+  background: radial-gradient(#a1b9ce -30%, #216096 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  position: relative;
+  z-index: 3;
+}
+
+@font-face {
+  font-family: 'HurmeSharp';
+  font-weight: 900;
+  src: url("../assets/fonts/Hurme1/HurmeGeometricSans1Black.otf");
+}
+
+@font-face {
+  font-family: 'HurmeSharp';
+  font-weight: 700;
+  src: url("../assets/fonts/Hurme1/HurmeGeometricSans1Bold.otf");
+}
+
+@font-face {
+  font-family: 'HurmeSharp';
+  font-weight: 600;
+  src: url("../assets/fonts/Hurme1/HurmeGeometricSans1Semibold.otf");
+}
+
+@font-face {
+  font-family: 'HurmeSharp';
+  font-weight: 400;
+  src: url("../assets/fonts/Hurme1/HurmeGeometricSans1.otf");
+}
+
+@font-face {
+  font-family: 'HurmeSharp';
+  font-weight: 300;
+  src: url("../assets/fonts/Hurme1/HurmeGeometricSans1Thin.otf");
+}
+
+@font-face {
+  font-family: 'HurmeSharp';
+  font-weight: 100;
+  src: url("../assets/fonts/Hurme1/HurmeGeometricSans1Hairline.otf");
+}
+
+body {
+  color: #373838;
+  font-family: sans-serif;
+}
+
+.container-fluid {
+  max-width: 1700px;
+}
+
+.btn {
+  border: none;
+  border-radius: 16px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+  background: linear-gradient(145deg, #DFE7F1, #a1b9ce);
+  -webkit-box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+          box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-inner {
+  position: relative;
+  z-index: 3;
+}
+
+.btn::before {
+  content: '';
+  z-index: 2;
+  opacity: 0;
+  background: linear-gradient(145deg, #a1b9ce, #DFE7F1);
+  -webkit-box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+          box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  border-radius: 16px;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+          box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn svg path {
+  fill: #31344b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'HurmeSharp';
+  font-weight: bold;
+}
+
+@-webkit-keyframes hueRotate {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes hueRotate {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@-webkit-keyframes logoBar {
+  from {
+    -webkit-transform: translateX(-14px) scaleX(2);
+            transform: translateX(-14px) scaleX(2);
+  }
+  to {
+    -webkit-transform: translateX(0) scaleX(1);
+            transform: translateX(0) scaleX(1);
+  }
+}
+
+@keyframes logoBar {
+  from {
+    -webkit-transform: translateX(-14px) scaleX(2);
+            transform: translateX(-14px) scaleX(2);
+  }
+  to {
+    -webkit-transform: translateX(0) scaleX(1);
+            transform: translateX(0) scaleX(1);
+  }
+}
+
+@-webkit-keyframes logoGroup {
+  from {
+    -webkit-transform: matrix(1.5184, 0, 0, 1.5184, -50.064, -12.644);
+            transform: matrix(1.5184, 0, 0, 1.5184, -50.064, -12.644);
+  }
+  to {
+    transforM: matrix(1.5184, 0, 0, 1.5184, -20.064, -12.644);
+  }
+}
+
+@keyframes logoGroup {
+  from {
+    -webkit-transform: matrix(1.5184, 0, 0, 1.5184, -50.064, -12.644);
+            transform: matrix(1.5184, 0, 0, 1.5184, -50.064, -12.644);
+  }
+  to {
+    transforM: matrix(1.5184, 0, 0, 1.5184, -20.064, -12.644);
+  }
+}
+
+@-webkit-keyframes sliderIn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes sliderIn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeInVid {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
+@keyframes fadeInVid {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
+@-webkit-keyframes hr {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70px;
+  }
+}
+
+@keyframes hr {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70px;
+  }
+}
+
+@-webkit-keyframes hrOut {
+  from {
+    width: 70px;
+  }
+  to {
+    width: 0px;
+  }
+}
+
+@keyframes hrOut {
+  from {
+    width: 70px;
+  }
+  to {
+    width: 0px;
+  }
+}
+
+@-webkit-keyframes spark {
+  from {
+    -webkit-clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+            clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes spark {
+  from {
+    -webkit-clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+            clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+/*# sourceMappingURL=predefinied.css.map */

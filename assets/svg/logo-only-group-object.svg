@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="38.742561mm"
+   height="14.741072mm"
+   viewBox="0 0 38.742561 14.741072"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="logo-only-group-object.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="100.51166"
+     inkscape:cy="-54.189579"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     viewbox-x="-0.2"
+     inkscape:window-width="3440"
+     inkscape:window-height="1361"
+     inkscape:window-x="1911"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-6.9925594,-16.730646)">
+    <path
+       style="opacity:1;vector-effect:none;fill:#ffa500;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 6.9925594,16.730646 H 45.735121 V 31.471718 H 6.9925594 Z"
+       id="rect834" />
+    <g
+       aria-label="group"
+       transform="matrix(0.26458333,0,0,0.26458333,3.0197149,0.38337418)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot815">
+      <path
+         d="m 53.812266,74.502109 h -4.16 v 2.56 c -1.48,-1.68 -4.36,-3.16 -7.64,-3.16 -8.04,0 -11.92,6.68 -11.92,11.6 0,5.4 4.52,11.72 11.84,11.72 4.68,0 6.88,-2.44 7.64,-3.48 h 0.08 c 0,5.76 -3.4,7.800001 -7.8,7.840001 -3.96,0 -5.68,-2.320001 -6.32,-3.200001 h -4.64 c 1.84,4.200001 5.76,7.000001 10.92,7.000001 7.56,0 12,-4.44 12,-11.720001 z m -4.16,11.12 c 0,2.84 -2.32,7.8 -7.76,7.8 -4.44,0 -7.64,-3.84 -7.64,-7.84 0,-4.2 3.28,-7.88 7.68,-7.88 2.56,0 7.72,1.68 7.72,7.92 z"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:40px;font-family:'ITC Avant Garde Gothic';-inkscape-font-specification:'ITC Avant Garde Gothic, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+         id="path836" />
+      <path
+         d="m 63.302891,96.662109 v -12.12 c 0,-3.16 1.12,-4.84 2.44,-5.56 1,-0.52 2.36,-0.8 3,-0.8 v -4.28 c -1.04,0.04 -3.88,0.12 -5.64,2.6 h -0.08 v -2 h -3.88 v 22.16 z"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:40px;font-family:'ITC Avant Garde Gothic';-inkscape-font-specification:'ITC Avant Garde Gothic, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+         id="path838" />
+      <path
+         d="m 93.934141,85.502109 c 0,-6.32 -5.24,-11.6 -11.96,-11.6 -6.88,0 -11.96,5.48 -11.96,11.52 0,5.6 4.52,11.8 11.96,11.8 7.52,0 11.96,-6.32 11.96,-11.72 z m -4.16,0 c 0,4.2 -3.32,7.92 -7.8,7.92 -4.64,0 -7.8,-3.88 -7.8,-7.88 0,-3.96 3.12,-7.84 7.8,-7.84 4.68,0 7.8,3.88 7.8,7.8 z"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:40px;font-family:'ITC Avant Garde Gothic';-inkscape-font-specification:'ITC Avant Garde Gothic, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+         id="path840" />
+      <path
+         d="m 98.165391,74.502109 v 12 c 0,4.44 1.08,6.92 2.919999,8.52 1.6,1.4 3.8,2.2 6.32,2.2 2.8,0 5.4,-1.04 6.52,-2.96 h 0.08 v 2.4 h 3.8 v -22.16 h -4.16 v 11.88 c 0,4.84 -2.36,7.04 -5.8,7.04 -3.08,0 -5.52,-1.44 -5.52,-6.92 v -12 z"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:40px;font-family:'ITC Avant Garde Gothic';-inkscape-font-specification:'ITC Avant Garde Gothic, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+         id="path842" />
+      <path
+         d="m 123.12727,104.06211 h 4.16 V 93.462109 h 0.08 c 0.84,1.4 3.16,3.76 7.8,3.76 7,0 11.2,-5.76 11.2,-11.36 0,-5.92 -3.96,-11.96 -11.48,-11.96 -2.84,0 -5.88,1.12 -7.88,4 h -0.08 v -3.4 h -3.8 z m 19.08,-18.440001 c 0,4.68 -3.56,7.8 -7.48,7.8 -4.2,0 -7.52,-3.4 -7.52,-7.88 0,-4.08 3.04,-7.84 7.4,-7.84 4.52,0 7.6,3.96 7.6,7.92 z"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:40px;font-family:'ITC Avant Garde Gothic';-inkscape-font-specification:'ITC Avant Garde Gothic, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+         id="path844" />
+    </g>
+  </g>
+</svg>

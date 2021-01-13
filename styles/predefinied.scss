@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'HurmeSharp';
+    font-weight: 900;
+    src: url('../assets/fonts/Hurme1/HurmeGeometricSans1Black.otf');
+}
+
+@font-face {
+    font-family: 'HurmeSharp';
+    font-weight: 700;
+    src: url('../assets/fonts/Hurme1/HurmeGeometricSans1Bold.otf');
+}
+
+@font-face {
+    font-family: 'HurmeSharp';
+    font-weight: 600;
+    src: url('../assets/fonts/Hurme1/HurmeGeometricSans1Semibold.otf');
+}
+
+@font-face {
+    font-family: 'HurmeSharp';
+    font-weight: 400;
+    src: url('../assets/fonts/Hurme1/HurmeGeometricSans1.otf');
+}
+
+@font-face {
+    font-family: 'HurmeSharp';
+    font-weight: 300;
+    src: url('../assets/fonts/Hurme1/HurmeGeometricSans1Thin.otf');
+}
+
+@font-face {
+    font-family: 'HurmeSharp';
+    font-weight: 100;
+    src: url('../assets/fonts/Hurme1/HurmeGeometricSans1Hairline.otf');
+}
+
+
+
+$durationXS: 200ms;
+$durationS: 300ms;
+$durationM: 400ms;
+$durationL: 600ms;
+$durationXL: 800ms;
+
+$fontWeightThin: 300;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightBold: 700;
+$fontSizeEnormous:6rem;
+$fontSizeH1:3rem;
+$fontSizeH2: 2rem;
+$fontSizeH3: 1.625rem;
+$fontSizeBodyL: 1.25rem;
+$fontSizeBodyM: 1.125rem;
+$fontSizeBodyS: 1rem;
+$fontSizeBodyXS: 0.8rem;
+$fontSizeSmallest: 0.5rem;
+$spaceLetters:0.45px;
+$lineHeightTitle: 1.1;
+$lineHeightBody: 1.5;
+
+$spaceOuter: 64px;
+$spaceXS: 4px;
+$spaceS: 8px;
+$spaceM: 16px;
+$spaceL: 24px;
+$spaceXL: 32px;
+$space2XL: 48px;
+$space3XL: 64px;
+$spaceHero: 80px;
+$space4XL: 96px;
+$space5XL: 128px;
+$section-margin:5rem;
+
+$cubicBezier:cubic-bezier(.91, .11, .19, .92);
+
+body {
+    color: $pirateBlack;
+    font-family: sans-serif;
+}
+
+.container-fluid {
+    max-width: 1700px;
+}
+
+.btn {
+    border: none;
+    border-radius: 16px;
+    transition: $durationL;
+    background: linear-gradient(145deg, #DFE7F1, #a1b9ce);
+
+    box-shadow: 6px 6px 12px #8fa5b7,
+        -6px -6px 12px #ffffff94;
+    position: relative;
+    z-index: 1;
+
+    &-inner {
+        position: relative;
+        z-index: 3;
+    }
+
+    &::before {
+        content: '';
+        z-index: 2;
+        opacity: 0;
+        background: linear-gradient(145deg, #a1b9ce, #DFE7F1);
+        box-shadow: 6px 6px 12px #8fa5b7,
+            -6px -6px 12px #ffffff94;
+        transition: $durationL;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        border-radius: 16px;
+    }
+
+    &:hover {
+
+        box-shadow: 6px 6px 12px #8fa5b7,
+            -6px -6px 12px #ffffff94;
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    // &:active,
+    // &:not(:disabled):not(.disabled):active,
+    // &:not(:disabled):not(.disabled).active,
+    // &-primary:not(:disabled):not(.disabled):active,
+    // &-primary:not(:disabled):not(.disabled).active,
+    // .show>&-primary.dropdown-toggle {
+    //     background: #b3cee5;
+    //     box-shadow: inset 6px 6px 12px #98afc3,
+    //         inset -6px -6px 12px #ceedff;
+    //     border: none;
+
+    //     &::before {
+    //         opacity: 0;
+    //     }
+    // }
+
+    svg path {
+        fill: #31344b;
+    }
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'HurmeSharp';
+    font-weight: bold;
+}
+
+
+
+
+
+@keyframes hueRotate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+
+@keyframes logoBar {
+    from {
+        transform: translateX(-14px) scaleX(2);
+    }
+
+    to {
+        transform: translateX(0) scaleX(1);
+    }
+}
+
+@keyframes logoGroup {
+    from {
+        transform: matrix(1.5184, 0, 0, 1.5184, -50.064, -12.644);
+    }
+
+    to {
+
+        transforM: matrix(1.5184, 0, 0, 1.5184, -20.064, -12.644);
+    }
+}
+
+@keyframes sliderIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fadeInVid {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 0.1
+    }
+}
+
+@keyframes hr {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 70px;
+    }
+}
+
+
+@keyframes hrOut {
+    from {
+        width: 70px;
+    }
+
+    to {
+        width: 0px;
+    }
+}
+
+@keyframes spark {
+    from {
+        clip-path: polygon(0 0, 0% 0%, 0% 100%, 0% 100%);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
