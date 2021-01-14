@@ -5,7 +5,15 @@ import PerfectScrollbar from 'perfect-scrollbar';
 import AOS from 'aos';
 // import anime from 'animejs/lib/anime.es.js';
 import Swup from 'swup';
-const swup = new Swup(); // only this line when included with script tag
+import SwupOverlayTheme from '@swup/overlay-theme';
+
+const swup = new Swup({
+    plugins: [new SwupOverlayTheme({
+        color: '#216096',
+        duration: 600,
+        direction: 'to-right',
+    })]
+}); // only this line when included with script tag
 
 AOS.init({
     duration: 700,
