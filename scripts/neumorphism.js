@@ -103,7 +103,7 @@ $(document).ready(function () {
     });
 
     // Tooltip
-    $('[data-toggle="tooltip"]').tooltip();
+    // $('[data-toggle="tooltip"]').tooltip();
 
     // Popover
     $('[data-toggle="popover"]').each(function () {
@@ -191,23 +191,23 @@ $(document).ready(function () {
     }
 
     if ($("#input-slider-vertical-2")[0]) {
-    var c = document.getElementById("input-slider-vertical-2"),
-        d = document.getElementById("input-slider-range-value-low"),
-        e = document.getElementById("input-slider-range-value-high"),
-        f = [d, e];
+        var c = document.getElementById("input-slider-vertical-2"),
+            d = document.getElementById("input-slider-range-value-low"),
+            e = document.getElementById("input-slider-range-value-high"),
+            f = [d, e];
 
-    noUiSlider.create(c, {
-        start: [parseInt(d.getAttribute('data-range-value-low')), parseInt(e.getAttribute('data-range-value-high'))],
-        connect: !0,
-        tooltips: true,
-        orientation: 'vertical',
-        range: {
-            min: parseInt(c.getAttribute('data-range-value-min')),
-            max: parseInt(c.getAttribute('data-range-value-max'))
-        }
-    }), c.noUiSlider.on("update", function (a, b) {
-        f[b].textContent = a[b]
-    })
+        noUiSlider.create(c, {
+            start: [parseInt(d.getAttribute('data-range-value-low')), parseInt(e.getAttribute('data-range-value-high'))],
+            connect: !0,
+            tooltips: true,
+            orientation: 'vertical',
+            range: {
+                min: parseInt(c.getAttribute('data-range-value-min')),
+                max: parseInt(c.getAttribute('data-range-value-max'))
+            }
+        }), c.noUiSlider.on("update", function (a, b) {
+            f[b].textContent = a[b]
+        })
     }
 
     //Progress bars
@@ -222,9 +222,9 @@ $(document).ready(function () {
                 opacity: "1"
             });
         }, {
-                triggerOnce: true,
-                offset: '60%'
-            });
+            triggerOnce: true,
+            offset: '60%'
+        });
     });
 
     // When in viewport
@@ -268,30 +268,30 @@ $(document).ready(function () {
     });
 
     //CounterUp
-    $('.counter').counterUp({
-        delay: 10,
-        time: 1000,
-        offset: 70,
-        beginAt: 100,
-        formatter: function (n) {
-            return n.replace(/,/g, '.');
-        }
-    });
+    // $('.counter').counterUp({
+    //     delay: 10,
+    //     time: 1000,
+    //     offset: 70,
+    //     beginAt: 100,
+    //     formatter: function (n) {
+    //         return n.replace(/,/g, '.');
+    //     }
+    // });
 
     //Countdown
-    $('#clock').countdown('2020/10/10').on('update.countdown', function (event) {
-        var $this = $(this).html(event.strftime(''
-            + '<span>%-w</span> week%!w '
-            + '<span>%-d</span> day%!d '
-            + '<span>%H</span> hr '
-            + '<span>%M</span> min '
-            + '<span>%S</span> sec'));
-    });
+    // $('#clock').countdown('2020/10/10').on('update.countdown', function (event) {
+    //     var $this = $(this).html(event.strftime('' +
+    //         '<span>%-w</span> week%!w ' +
+    //         '<span>%-d</span> day%!d ' +
+    //         '<span>%H</span> hr ' +
+    //         '<span>%M</span> min ' +
+    //         '<span>%S</span> sec'));
+    // });
 
     //Parallax
-    $('.jarallax').jarallax({
-        speed: 0.2
-    });
+    // $('.jarallax').jarallax({
+    //     speed: 0.2
+    // });
 
     //Smooth scroll
     var scroll = new SmoothScroll('a[href*="#"]', {
@@ -313,7 +313,10 @@ $(document).ready(function () {
             var id = $(this).attr('data-equalize-height');
             if (!equalize.uniqueIds.includes(id)) {
                 equalize.uniqueIds.push(id)
-                equalize.elements.push({ id: id, elements: [] });
+                equalize.elements.push({
+                    id: id,
+                    elements: []
+                });
             }
         });
 
@@ -386,4 +389,4 @@ $(document).ready(function () {
 
     $('.current-year').text(new Date().getFullYear());
 
-});   
+});

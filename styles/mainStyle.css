@@ -32898,6 +32898,16 @@ body {
   background-color: #4e4f50;
 }
 
+.transition-fade {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
 .welcome {
   position: relative;
   width: 100%;
@@ -33047,8 +33057,6 @@ body {
 }
 
 .welcome__arrow {
-  -webkit-animation: fade 1.3s 2.7s cubic-bezier(0.76, 0.01, 0.21, 1.02) forwards;
-          animation: fade 1.3s 2.7s cubic-bezier(0.76, 0.01, 0.21, 1.02) forwards;
   -webkit-transition: 600ms ease;
   transition: 600ms ease;
   opacity: 0;
