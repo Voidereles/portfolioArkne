@@ -201,7 +201,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"aos/dist/aos.css":"node_modules/aos/dist/aos.css","owl.carousel/dist/assets/owl.carousel.css":"node_modules/owl.carousel/dist/assets/owl.carousel.css","./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1Black.otf":[["HurmeGeometricSans1Black.05ce6bf7.otf","assets/fonts/Hurme1/HurmeGeometricSans1Black.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1Black.otf"],"./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1Bold.otf":[["HurmeGeometricSans1Bold.4133cb3c.otf","assets/fonts/Hurme1/HurmeGeometricSans1Bold.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1Bold.otf"],"./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1Semibold.otf":[["HurmeGeometricSans1Semibold.32d6bf63.otf","assets/fonts/Hurme1/HurmeGeometricSans1Semibold.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1Semibold.otf"],"./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1.otf":[["HurmeGeometricSans1.2cbf7c96.otf","assets/fonts/Hurme1/HurmeGeometricSans1.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1.otf"],"./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1Thin.otf":[["HurmeGeometricSans1Thin.3f02aadd.otf","assets/fonts/Hurme1/HurmeGeometricSans1Thin.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1Thin.otf"],"./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1Hairline.otf":[["HurmeGeometricSans1Hairline.34f4bd40.otf","assets/fonts/Hurme1/HurmeGeometricSans1Hairline.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1Hairline.otf"],"./..\\assets\\eclipseShadow.png":[["eclipseShadow.ceefb9e1.png","assets/eclipseShadow.png"],"assets/eclipseShadow.png"],"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/6492/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/6492/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"aos/dist/aos.css":"node_modules/aos/dist/aos.css","owl.carousel/dist/assets/owl.carousel.css":"node_modules/owl.carousel/dist/assets/owl.carousel.css","./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1Black.otf":[["HurmeGeometricSans1Black.05ce6bf7.otf","assets/fonts/Hurme1/HurmeGeometricSans1Black.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1Black.otf"],"./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1Bold.otf":[["HurmeGeometricSans1Bold.4133cb3c.otf","assets/fonts/Hurme1/HurmeGeometricSans1Bold.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1Bold.otf"],"./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1Semibold.otf":[["HurmeGeometricSans1Semibold.32d6bf63.otf","assets/fonts/Hurme1/HurmeGeometricSans1Semibold.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1Semibold.otf"],"./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1.otf":[["HurmeGeometricSans1.2cbf7c96.otf","assets/fonts/Hurme1/HurmeGeometricSans1.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1.otf"],"./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1Thin.otf":[["HurmeGeometricSans1Thin.3f02aadd.otf","assets/fonts/Hurme1/HurmeGeometricSans1Thin.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1Thin.otf"],"./..\\assets\\fonts\\Hurme1\\HurmeGeometricSans1Hairline.otf":[["HurmeGeometricSans1Hairline.34f4bd40.otf","assets/fonts/Hurme1/HurmeGeometricSans1Hairline.otf"],"assets/fonts/Hurme1/HurmeGeometricSans1Hairline.otf"],"./..\\assets\\eclipseShadow.png":[["eclipseShadow.ceefb9e1.png","assets/eclipseShadow.png"],"assets/eclipseShadow.png"],"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/10628/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/10628/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -229,7 +229,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54606" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56173" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -405,5 +405,144 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/6492/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
+},{}],"../../../../AppData/Roaming/npm-cache/_npx/10628/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../../AppData/Roaming/npm-cache/_npx/10628/node_modules/parcel/src/builtins/bundle-loader.js":[function(require,module,exports) {
+var getBundleURL = require('./bundle-url').getBundleURL;
+
+function loadBundlesLazy(bundles) {
+  if (!Array.isArray(bundles)) {
+    bundles = [bundles];
+  }
+
+  var id = bundles[bundles.length - 1];
+
+  try {
+    return Promise.resolve(require(id));
+  } catch (err) {
+    if (err.code === 'MODULE_NOT_FOUND') {
+      return new LazyPromise(function (resolve, reject) {
+        loadBundles(bundles.slice(0, -1)).then(function () {
+          return require(id);
+        }).then(resolve, reject);
+      });
+    }
+
+    throw err;
+  }
+}
+
+function loadBundles(bundles) {
+  return Promise.all(bundles.map(loadBundle));
+}
+
+var bundleLoaders = {};
+
+function registerBundleLoader(type, loader) {
+  bundleLoaders[type] = loader;
+}
+
+module.exports = exports = loadBundlesLazy;
+exports.load = loadBundles;
+exports.register = registerBundleLoader;
+var bundles = {};
+
+function loadBundle(bundle) {
+  var id;
+
+  if (Array.isArray(bundle)) {
+    id = bundle[1];
+    bundle = bundle[0];
+  }
+
+  if (bundles[bundle]) {
+    return bundles[bundle];
+  }
+
+  var type = (bundle.substring(bundle.lastIndexOf('.') + 1, bundle.length) || bundle).toLowerCase();
+  var bundleLoader = bundleLoaders[type];
+
+  if (bundleLoader) {
+    return bundles[bundle] = bundleLoader(getBundleURL() + bundle).then(function (resolved) {
+      if (resolved) {
+        module.bundle.register(id, resolved);
+      }
+
+      return resolved;
+    }).catch(function (e) {
+      delete bundles[bundle];
+      throw e;
+    });
+  }
+}
+
+function LazyPromise(executor) {
+  this.executor = executor;
+  this.promise = null;
+}
+
+LazyPromise.prototype.then = function (onSuccess, onError) {
+  if (this.promise === null) this.promise = new Promise(this.executor);
+  return this.promise.then(onSuccess, onError);
+};
+
+LazyPromise.prototype.catch = function (onError) {
+  if (this.promise === null) this.promise = new Promise(this.executor);
+  return this.promise.catch(onError);
+};
+},{"./bundle-url":"../../../../AppData/Roaming/npm-cache/_npx/10628/node_modules/parcel/src/builtins/bundle-url.js"}],"../../../../AppData/Roaming/npm-cache/_npx/10628/node_modules/parcel/src/builtins/loaders/browser/js-loader.js":[function(require,module,exports) {
+module.exports = function loadJSBundle(bundle) {
+  return new Promise(function (resolve, reject) {
+    var script = document.createElement('script');
+    script.async = true;
+    script.type = 'text/javascript';
+    script.charset = 'utf-8';
+    script.src = bundle;
+
+    script.onerror = function (e) {
+      script.onerror = script.onload = null;
+      reject(e);
+    };
+
+    script.onload = function () {
+      script.onerror = script.onload = null;
+      resolve();
+    };
+
+    document.getElementsByTagName('head')[0].appendChild(script);
+  });
+};
+},{}],0:[function(require,module,exports) {
+var b=require("../../../../AppData/Roaming/npm-cache/_npx/10628/node_modules/parcel/src/builtins/bundle-loader.js");b.register("js",require("../../../../AppData/Roaming/npm-cache/_npx/10628/node_modules/parcel/src/builtins/loaders/browser/js-loader.js"));b.load([]);
+},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/10628/node_modules/parcel/src/builtins/hmr-runtime.js",0], null)
 //# sourceMappingURL=/mainStyle.64e8606b.js.map

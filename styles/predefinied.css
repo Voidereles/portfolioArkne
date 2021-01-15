@@ -62,13 +62,21 @@
   src: url("../assets/fonts/Hurme1/HurmeGeometricSans1Hairline.otf");
 }
 
-body {
-  color: #373838;
-  font-family: sans-serif;
+p,
+ol li,
+ul li,
+h1 {
+  font-family: 'HurmeSharp', sans-serif;
 }
 
 .container-fluid {
   max-width: 1700px;
+}
+
+button {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
 }
 
 .btn {
@@ -76,11 +84,14 @@ body {
   border-radius: 16px;
   -webkit-transition: 600ms;
   transition: 600ms;
-  background: linear-gradient(145deg, #DFE7F1, #a1b9ce);
-  -webkit-box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
-          box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+  background: linear-gradient(145deg, #DFE7F1, #A1B9CE);
+  -webkit-box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+          box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
   position: relative;
   z-index: 1;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
 }
 
 .btn-inner {
@@ -92,9 +103,9 @@ body {
   content: '';
   z-index: 2;
   opacity: 0;
-  background: linear-gradient(145deg, #a1b9ce, #DFE7F1);
-  -webkit-box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
-          box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+  background: linear-gradient(145deg, #A1B9CE, #DFE7F1);
+  -webkit-box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+          box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
   -webkit-transition: 600ms;
   transition: 600ms;
   width: 100%;
@@ -107,8 +118,8 @@ body {
 }
 
 .btn:hover {
-  -webkit-box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
-          box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+  -webkit-box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
+          box-shadow: 6px 6px 12px #8fa5b7, -6px -6px 12px #ffffff94;
 }
 
 .btn:hover::before {

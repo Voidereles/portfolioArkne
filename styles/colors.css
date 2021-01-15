@@ -1,6 +1,5 @@
 /* CSS HSL */
 /* SCSS HSL */
-/* SCSS Gradient */
 .color-blue {
   color: #216096;
 }
@@ -17,7 +16,7 @@
 .color-blue-shiny {
   display: inline-block;
   background: #216096;
-  background: radial-gradient(#a1b9ce -30%, #216096 100%);
+  background: radial-gradient(#A1B9CE -30%, #216096 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

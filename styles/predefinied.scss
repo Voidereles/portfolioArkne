@@ -1,3 +1,5 @@
+@import 'colors.scss';
+
 @font-face {
     font-family: 'HurmeSharp';
     font-weight: 900;
@@ -35,7 +37,8 @@
 }
 
 
-
+$bezierFastoutSlowin: cubic-bezier(0.4, 0.0, 0.2, 1);
+$cubicBezier:cubic-bezier(.91, .11, .19, .92);
 $durationXS: 200ms;
 $durationS: 300ms;
 $durationM: 400ms;
@@ -72,27 +75,35 @@ $space4XL: 96px;
 $space5XL: 128px;
 $section-margin:5rem;
 
-$cubicBezier:cubic-bezier(.91, .11, .19, .92);
 
-body {
-    color: $pirateBlack;
-    font-family: sans-serif;
+p,
+ol li,
+ul li,
+h1 {
+    font-family: 'HurmeSharp', sans-serif;
 }
 
 .container-fluid {
     max-width: 1700px;
 }
 
+button {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
 .btn {
     border: none;
     border-radius: 16px;
     transition: $durationL;
-    background: linear-gradient(145deg, #DFE7F1, #a1b9ce);
+    background: $bigBtnGradient;
 
-    box-shadow: 6px 6px 12px #8fa5b7,
-        -6px -6px 12px #ffffff94;
+    box-shadow: 6px 6px 12px $neuShadow1,
+        -6px -6px 12px $neuShadow2;
     position: relative;
     z-index: 1;
+    appearance: none;
+    -webkit-appearance: none;
 
     &-inner {
         position: relative;
@@ -103,9 +114,9 @@ body {
         content: '';
         z-index: 2;
         opacity: 0;
-        background: linear-gradient(145deg, #a1b9ce, #DFE7F1);
-        box-shadow: 6px 6px 12px #8fa5b7,
-            -6px -6px 12px #ffffff94;
+        background: $bigBtnHoverGradient;
+        box-shadow: 6px 6px 12px $neuShadow1,
+            -6px -6px 12px $neuShadow2;
         transition: $durationL;
         width: 100%;
         height: 100%;
@@ -118,8 +129,8 @@ body {
 
     &:hover {
 
-        box-shadow: 6px 6px 12px #8fa5b7,
-            -6px -6px 12px #ffffff94;
+        box-shadow: 6px 6px 12px $neuShadow1,
+            -6px -6px 12px $neuShadow2;
 
         &::before {
             opacity: 1;
