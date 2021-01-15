@@ -33027,8 +33027,6 @@ article a:hover {
           box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
 }
 
-/* CSS HSL */
-/* SCSS HSL */
 .color-blue {
   color: #216096;
 }
@@ -33054,8 +33052,6 @@ article a:hover {
   z-index: 3;
 }
 
-/* CSS HSL */
-/* SCSS HSL */
 .color-blue {
   color: #216096;
 }
@@ -33392,8 +33388,6 @@ h1, h2, h3, h4, h5, h6,
 body {
   padding: 0;
   margin: 0;
-  background: #ECF3F9;
-  background: #216096;
   background: #3D5F7C;
   font-family: 'HurmeSharp', sans-serif;
   -webkit-user-drag: none;
@@ -33441,7 +33435,7 @@ html.is-animating .transition-fade {
 }
 
 .header .container-fluid {
-  height: 72px;
+  height: 52px;
   position: relative;
   background: transparent;
   border-radius: .0010px;
@@ -33582,7 +33576,6 @@ html.is-animating .transition-fade {
 
 .header__nav-link:active, .header__nav-link:hover {
   text-decoration: none;
-  color: #216096;
 }
 
 .header__nav-link:active:before, .header__nav-link:hover:before {
@@ -33601,20 +33594,33 @@ html.is-animating .transition-fade {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.header__nav-left li:hover {
+  margin-top: -0.25rem;
+}
+
+.header__nav-left li:hover ~ .magic-line {
+  opacity: 1;
 }
 
 .header__nav-left .magic-line {
+  content: '';
+  display: block;
   position: absolute;
-  bottom: -0.75rem;
-  left: 0;
-  padding: 0;
-  width: 100px;
-  height: 4px;
-  border-radius: 200px;
-  background: linear-gradient(145deg, #A1B9CE, #C0DCF5);
-  -webkit-transition: 400ms;
-  transition: 400ms;
+  bottom: -1rem;
+  left: calc(50% - 10px);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   opacity: 0;
+  background: #31344b;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .header__social-link {
@@ -33850,11 +33856,11 @@ html.is-animating .transition-fade {
 }
 
 .about {
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 100px);
   background: radial-gradient(#C3D1E4 0%, #DDE7F3 78.9%, #D4E0ED 100%);
   position: relative;
   overflow: hidden;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .about::after {
@@ -33872,7 +33878,7 @@ html.is-animating .transition-fade {
 }
 
 .about__radial {
-  background: linear-gradient(141.53deg, #FFFFFF 32.46%, #B9CCE2 65.03%);
+  background: linear-gradient(141.53deg, #FFFFFF 5%, #A1B9CE 65.03%);
   border-radius: 50%;
   width: 50vmin;
   height: 50vmin;
@@ -33937,7 +33943,7 @@ html.is-animating .transition-fade {
 }
 
 .about .container-fluid .row {
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 100px);
 }
 
 .about__text {
@@ -33976,7 +33982,7 @@ html.is-animating .transition-fade {
   position: absolute;
   display: block;
   width: calc(7/12 * 100% + 3*128px);
-  height: calc(100vh - 120px);
+  height: calc(100vh - 100px);
   z-index: 4;
   padding: 128px;
   overflow: hidden;

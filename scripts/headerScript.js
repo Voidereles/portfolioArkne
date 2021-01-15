@@ -23,7 +23,7 @@ const headerMoveLinks = () => {
     } else {
         document.querySelector('.header__nav').append(document.querySelector('.header__nav-right'));
     }
-    console.log("links moved");
+    // console.log("links moved");
 }
 
 window.addEventListener('resize', headerMoveLinks);

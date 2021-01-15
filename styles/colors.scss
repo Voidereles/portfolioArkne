@@ -1,51 +1,20 @@
-$classicBlue: rgb(15, 76, 129); //Although sapphires can come in many colors, this classic blue hue represents the most popular shade of sapphire gemstones. Like a boundless night sky opening up to infinite possibilities, this rich jewel tone pairs well with many other colors and styles.
-$flameScarlet: rgb(205, 33, 42); //This fiery orange-hued red exudes confidence, fun, and vivacity! A simple rose gold setting, like the delicate and gently tapering Elle Ring, highlights and complements the warm, vibrant color of this lab created fancy colored diamond.
-$saffron: rgb(255, 165, 0); //Named for the aromatic yellow spice, this punchy golden yellow color adds distinctive flavor to the 2020 color palette. Complete the sunny golden look by setting your saffron colored gemstone in a yellow gold diamond halo engagement ring, like the Waverly Diamond Ring.
-$grapeCompote: rgb(107, 88, 118); //A color that Pantone describes as both “mysterious” and “mellow,” this deep purple hue is perfectly embodied by an alexandrite gemstone. Alexandrite is known for having visual color changing properties when viewed under different types of light – shifting between bluish green to purplish red. This seemingly mystical stone is a great choice for anyone looking to make an eccentric statement!
-$pirateBlack: rgb(55, 56, 56);
-
-/* CSS HSL */
-// --azure-x-11-web-color: hsla(186, 25%, 84%, 1);
-// --white: hsla(0, 0%, 100%, 1);
-// --blue-sapphire: hsla(204, 39%, 33%, 1);
-// --prussian-blue: hsla(212, 49%, 17%, 1);
-// --prussian-blue-2: hsla(209, 49%, 19%, 1);
-// --prussian-blue-3: hsla(207, 51%, 22%, 1);
-// --yale-blue: hsla(208, 79%, 28%, 1);
-// --yale-blue-2: hsla(208, 79%, 28%, 1);
-// --blue-sapphire-2: hsla(200, 51%, 31%, 1);
-
-/* SCSS HSL */
-$azure-x-11-web-color: hsla(186, 25%, 84%, 1);
-$white: hsla(0, 0%, 100%, 1);
-$blue-sapphire: hsla(204, 39%, 33%, 1);
-$prussian-blue: hsla(212, 49%, 17%, 1);
-$prussian-blue-2: hsla(209, 49%, 19%, 1);
-$prussian-blue-3: hsla(207, 51%, 22%, 1);
-$yale-blue: hsla(208, 79%, 28%, 1);
-$yale-blue-2: hsla(208, 79%, 28%, 1);
-$blue-sapphire-2: hsla(200, 51%, 31%, 1);
-
+$pirateBlack: #373838;
 $spaceColor:#31344b;
 $main-blue: #216096;
-$close-white: #ECF3F9;
 $queenBlue: #3D5F7C;
 $beauBlue: #C0DCF5; // it's part of logo-bar
 $lightSteelBlue: #A1B9CE; // it's a logo-bar and part of neumorphism
 $greyGainsboro: #E0E0E2; // it's a background of welcome's hr
 $neuAliceBlue: #DFE7F1; // part of neumorphism button
-// $neu#E1E9F3;
+
 $steelBeauGradient:linear-gradient(145deg, $lightSteelBlue, $beauBlue);
 $smallBtnGradient:linear-gradient(145deg, transparent, $neuAliceBlue);
 $bigBtnGradient: linear-gradient(145deg, $neuAliceBlue, $lightSteelBlue);
 $bigBtnHoverGradient: linear-gradient(145deg, $lightSteelBlue, $neuAliceBlue);
+
 $neuShadow1: #8fa5b7;
 $neuShadow2: #ffffff94;
-
-
-
-
-$forNeuromorphismButton:#b3cee5;
+$forNeuromorphismButton:#b3cee5; //based on this colour, the shadows colours has been made (not used)
 
 .color-blue {
     color: $main-blue;
@@ -63,7 +32,6 @@ $forNeuromorphismButton:#b3cee5;
 .color-blue-shiny {
     display: inline-block;
     background: #216096;
-    // background: radial-gradient(#216096 0%, #548caf 100%);
     background: radial-gradient($lightSteelBlue -30%, $main-blue 100%);
     background-clip: text;
     -webkit-background-clip: text;
