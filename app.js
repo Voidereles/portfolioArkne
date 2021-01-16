@@ -1,5 +1,6 @@
 // import './scripts/neumorphism.js';
 import 'owl.carousel';
+import 'jquery-mousewheel';
 import 'bootstrap';
 import PerfectScrollbar from 'perfect-scrollbar';
 import AOS from 'aos';
@@ -33,11 +34,13 @@ $(window).resize(function () {
 
 function owlCarousels() {
 
-    $('.work__carousel').owlCarousel({
+    const workCarousel = $('.work__carousel');
+
+    workCarousel.owlCarousel({
         loop: false,
         autoplay: true,
         lazyLoad: true,
-        items: 1,
+        items: 4,
         margin: 0,
         center: true,
         nav: false,
@@ -48,24 +51,21 @@ function owlCarousels() {
         // autoplaySpeed: 3000,
         // autoplayTimeout: 5000,
         autoplay: false,
-
-        responsive: {
-            // 1200: {
-            //     items: 4,
-            //     nav: false
-            // },
-            // 600: {
-            //     items: 2,
-            //     nav: false
-            // },
-            0: {
-                items: 1,
-                nav: false,
-                stagePadding: 150
-            }
-        }
+        // stagePadding: 150
     });
 
+    workCarousel.on('mousewheel', '.owl-stage', function (e) {
+        // console.log('here1');
+        if (e.originalEvent.wheelDelta < 0) {
+            // if (e.deltaX < 0) {
+            workCarousel.trigger('next.owl');
+            // console.log('here2');
+        } else {
+            workCarousel.trigger('prev.owl');
+            // console.log('here3');
+        }
+        e.preventDefault();
+    });
 }
 
 function init() {
@@ -74,7 +74,7 @@ function init() {
         owlCarousels();
         if (window.innerWidth > 992) {
             if (typeof (document.querySelector('.about')) != 'undefined' && document.querySelector('.about') != null) {
-                console.log('inner about');
+                // console.log('inner about');
                 document.getElementById("header").style.display = "flex";
                 // const radials = document.querySelector(".about__radial-container");
                 const allRadials = document.querySelectorAll(".about__radial");
@@ -101,7 +101,7 @@ function init() {
 
             const hoverPlusLinks = document.querySelectorAll('.hoverPlus');
             Array.from(hoverPlusLinks).forEach(element => {
-                console.log("test");
+                // console.log("test");
                 element.onmouseenter = el => {
                     cursor.style.width = '36px';
                     cursor.style.height = '36px';

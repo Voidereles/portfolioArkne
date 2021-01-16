@@ -34097,7 +34097,7 @@ html.is-animating .transition-fade {
   position: relative;
   margin-top: 0.5rem;
   width: 780px;
-  min-height: 400px;
+  min-height: 390px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
@@ -34108,6 +34108,8 @@ html.is-animating .transition-fade {
           box-shadow: 14px 14px 28px #8fa5b7, -14px -14px 28px #ffffff94;
   margin: 34px;
   border-radius: 1rem;
+  height: 390px;
+  max-height: 100%;
 }
 
 .work__item-content-inner {
@@ -34133,10 +34135,17 @@ html.is-animating .transition-fade {
   transition: 0.5s ease;
   border-radius: 1rem;
   height: 100%;
+  width: 100%;
 }
 
 .work__item-background {
   border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  height: 390px;
+  max-height: 100%;
 }
 
 .work__item-categories {
@@ -34149,6 +34158,7 @@ html.is-animating .transition-fade {
   font-size: 2rem;
   line-height: 1.3;
   color: white;
+  margin-bottom: 2rem;
 }
 
 .work__btn {
