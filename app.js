@@ -27,9 +27,51 @@ AOS.init({
 const ps = new PerfectScrollbar('body');
 let itemWidth, itemLeftPos;
 
+$(window).resize(function () {
+    ps.update();
+});
+
+function owlCarousels() {
+
+    $('.work__carousel').owlCarousel({
+        loop: false,
+        autoplay: true,
+        lazyLoad: true,
+        items: 1,
+        margin: 0,
+        center: true,
+        nav: false,
+        autoWidth: true,
+        autoplayHoverPause: true,
+        dots: false,
+        responsiveClass: true,
+        // autoplaySpeed: 3000,
+        // autoplayTimeout: 5000,
+        autoplay: false,
+
+        responsive: {
+            // 1200: {
+            //     items: 4,
+            //     nav: false
+            // },
+            // 600: {
+            //     items: 2,
+            //     nav: false
+            // },
+            0: {
+                items: 1,
+                nav: false,
+                stagePadding: 150
+            }
+        }
+    });
+
+}
+
 function init() {
     if (document.querySelector('.about')) {
 
+        owlCarousels();
         if (window.innerWidth > 992) {
             if (typeof (document.querySelector('.about')) != 'undefined' && document.querySelector('.about') != null) {
                 console.log('inner about');
@@ -57,7 +99,53 @@ function init() {
                 // });
             }
 
+            const hoverPlusLinks = document.querySelectorAll('.hoverPlus');
+            Array.from(hoverPlusLinks).forEach(element => {
+                console.log("test");
+                element.onmouseenter = el => {
+                    cursor.style.width = '36px';
+                    cursor.style.height = '36px';
+                    document.querySelector('.cursor__plus').style.transform = "scale(1)";
+                }
+                element.onmouseleave = el => {
+                    cursor.style.width = '18px';
+                    cursor.style.height = '18px';
+                    document.querySelector('.cursor__plus').style.transform = "scale(0)";
+                }
+            });
 
+            const hoverPortfolio = document.querySelector('.work__carousel');
+            hoverPortfolio.onmouseenter = el => {
+                cursor.style.width = '42px';
+                cursor.style.height = '42px';
+                cursor.style.background = "white";
+                document.querySelector('.cursor__resize').style.transform = "scale(1)";
+            }
+            hoverPortfolio.onmouseleave = el => {
+                cursor.style.width = '18px';
+                cursor.style.height = '18px';
+                cursor.style.background = "rgba(61, 95, 124, 0.2)";
+                document.querySelector('.cursor__resize').style.transform = "scale(0)";
+            }
+
+            let cursor = document.querySelector('.cursor');
+            let idle;
+            let x, y;
+            document.onmousemove = e => {
+                x = e.clientX;
+                y = e.clientY;
+
+                cursor.style.opacity = 1;
+                clearInterval(idle);
+
+                idle = setTimeout(function () {
+                    cursor.style.opacity = 0;
+                }, 3000);
+
+                cursor.style.top = '0';
+                cursor.style.left = '0';
+                cursor.style.transform = `translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))`;
+            };
 
 
         }

@@ -12,6 +12,4 @@ $(function () {
 
 $(window).resize(function () {
     logoBarDimensions();
-    ps.update();
-
 });
