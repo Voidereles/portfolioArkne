@@ -34162,15 +34162,15 @@ html.is-animating .transition-fade {
 }
 
 .work__btn {
-  -webkit-box-shadow: 6px 6px 12px #35536cdd, -6px -6px 12px #456b8cdd;
-          box-shadow: 6px 6px 12px #35536cdd, -6px -6px 12px #456b8cdd;
+  -webkit-box-shadow: 6px 6px 12px #35536c9d, -6px -6px 12px #456b8cdd;
+          box-shadow: 6px 6px 12px #35536c9d, -6px -6px 12px #456b8cdd;
   padding: 1rem 2rem;
   margin: 1rem 0;
 }
 
 .work__btn:hover {
-  -webkit-box-shadow: 6px 6px 12px #35536cdd, -6px -6px 12px #456b8cdd;
-          box-shadow: 6px 6px 12px #35536cdd, -6px -6px 12px #456b8cdd;
+  -webkit-box-shadow: 6px 6px 12px #35536c9d, -6px -6px 12px #456b8cdd;
+          box-shadow: 6px 6px 12px #35536c9d, -6px -6px 12px #456b8cdd;
 }
 
 .work__btn:hover::before {

@@ -81,8 +81,8 @@ function init() {
                 // const radialBottomLeft = document.querySelector('.about-radial-1');
 
 
-                let counter = $('.about__heading');
-                let oTop = counter.offset().top - window.innerHeight;
+                // let counter = $('.about__heading');
+                // let oTop = counter.offset().top - window.innerHeight;
                 // if (a == 0 && $(window).scrollTop() > oTop) {
 
                 setTimeout(function () {
