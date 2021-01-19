@@ -40,18 +40,57 @@ function owlCarousels() {
         loop: false,
         autoplay: true,
         lazyLoad: true,
-        items: 4,
+        items: 2,
         margin: 0,
         center: true,
         nav: false,
-        autoWidth: true,
-        autoplayHoverPause: true,
+        // autoWidth: true,
+        // autoplayHoverPause: true,
         dots: false,
         responsiveClass: true,
         // autoplaySpeed: 3000,
         // autoplayTimeout: 5000,
         autoplay: false,
-        // stagePadding: 150
+        stagePadding: 0,
+        responsive: {
+            0: {
+                items: 1,
+                stagePadding: 35,
+                margin: 25
+            },
+            996: {
+                items: 1,
+                stagePadding: 250,
+                margin: 0
+            },
+            1400: {
+                items: 1,
+                stagePadding: 300
+            },
+            1550: {
+                items: 1,
+                stagePadding: 400
+            },
+            1800: {
+                items: 2,
+                stagePadding: 150
+            },
+            2000: {
+                stagePadding: 300
+            },
+            2350: {
+                items: 3,
+                stagePadding: 50
+            },
+            2800: {
+                items: 3,
+                stagePadding: 100
+            },
+            2950: {
+                items: 4,
+                stagePadding: 50
+            }
+        }
     });
 
     workCarousel.on('mousewheel', '.owl-stage', function (e) {
@@ -72,10 +111,11 @@ function init() {
     if (document.querySelector('.about')) {
 
         owlCarousels();
+
+        document.getElementById("header").style.display = "flex";
         if (window.innerWidth > 992) {
             if (typeof (document.querySelector('.about')) != 'undefined' && document.querySelector('.about') != null) {
                 // console.log('inner about');
-                document.getElementById("header").style.display = "flex";
                 // const radials = document.querySelector(".about__radial-container");
                 const allRadials = document.querySelectorAll(".about__radial");
                 // const radialBottomLeft = document.querySelector('.about-radial-1');

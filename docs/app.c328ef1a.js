@@ -24929,20 +24929,60 @@ $(window).resize(function () {
 });
 
 function owlCarousels() {
+  var _workCarousel$owlCaro;
+
   var workCarousel = $('.work__carousel');
-  workCarousel.owlCarousel(_defineProperty({
+  workCarousel.owlCarousel((_workCarousel$owlCaro = {
     loop: false,
     autoplay: true,
     lazyLoad: true,
-    items: 4,
+    items: 2,
     margin: 0,
     center: true,
     nav: false,
-    autoWidth: true,
-    autoplayHoverPause: true,
+    // autoWidth: true,
+    // autoplayHoverPause: true,
     dots: false,
     responsiveClass: true
-  }, "autoplay", false));
+  }, _defineProperty(_workCarousel$owlCaro, "autoplay", false), _defineProperty(_workCarousel$owlCaro, "stagePadding", 0), _defineProperty(_workCarousel$owlCaro, "responsive", {
+    0: {
+      items: 1,
+      stagePadding: 35,
+      margin: 25
+    },
+    996: {
+      items: 1,
+      stagePadding: 250,
+      margin: 0
+    },
+    1400: {
+      items: 1,
+      stagePadding: 300
+    },
+    1550: {
+      items: 1,
+      stagePadding: 400
+    },
+    1800: {
+      items: 2,
+      stagePadding: 150
+    },
+    2000: {
+      stagePadding: 300
+    },
+    2350: {
+      items: 3,
+      stagePadding: 50
+    },
+    2800: {
+      items: 3,
+      stagePadding: 100
+    },
+    2950: {
+      items: 4,
+      stagePadding: 50
+    }
+  }), _workCarousel$owlCaro));
   workCarousel.on('mousewheel', '.owl-stage', function (e) {
     // console.log('here1');
     if (e.originalEvent.wheelDelta < 0) {
@@ -24959,16 +24999,16 @@ function owlCarousels() {
 function init() {
   if (document.querySelector('.about')) {
     owlCarousels();
+    document.getElementById("header").style.display = "flex";
 
     if (window.innerWidth > 992) {
       if (typeof document.querySelector('.about') != 'undefined' && document.querySelector('.about') != null) {
-        console.log('inner about');
-        document.getElementById("header").style.display = "flex"; // const radials = document.querySelector(".about__radial-container");
-
+        // console.log('inner about');
+        // const radials = document.querySelector(".about__radial-container");
         var allRadials = document.querySelectorAll(".about__radial"); // const radialBottomLeft = document.querySelector('.about-radial-1');
-
-        var counter = $('.about__heading');
-        var oTop = counter.offset().top - window.innerHeight; // if (a == 0 && $(window).scrollTop() > oTop) {
+        // let counter = $('.about__heading');
+        // let oTop = counter.offset().top - window.innerHeight;
+        // if (a == 0 && $(window).scrollTop() > oTop) {
 
         setTimeout(function () {
           document.querySelector('.about').addEventListener("mousemove", function (e) {
@@ -24985,8 +25025,7 @@ function init() {
 
       var hoverPlusLinks = document.querySelectorAll('.hoverPlus');
       Array.from(hoverPlusLinks).forEach(function (element) {
-        console.log("test");
-
+        // console.log("test");
         element.onmouseenter = function (el) {
           cursor.style.width = '36px';
           cursor.style.height = '36px';
@@ -25103,7 +25142,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34147" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44711" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
