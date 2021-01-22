@@ -24776,21 +24776,7 @@ function toComment(sourceMap) {
 /******/ ]);
 });
 },{}],"scripts/logoBarScript.js":[function(require,module,exports) {
-function logoBarDimensions() {
-  if (typeof document.querySelector('.welcome') != 'undefined' && document.querySelector('.welcome') != null) {
-    var logoBarWidth = document.querySelector('.welcome__logo-bar').getBoundingClientRect().width / 2;
-    var logoBarHeight = document.querySelector('.welcome__logo-bar').getBoundingClientRect().height;
-    $('.welcome__logo-bar-helper').css('width', logoBarWidth + 'px');
-    $('.welcome__logo-bar-helper').css('height', logoBarHeight + 'px');
-  }
-}
 
-$(function () {
-  logoBarDimensions();
-});
-$(window).resize(function () {
-  logoBarDimensions();
-});
 },{}],"scripts/headerScript.js":[function(require,module,exports) {
 function headerOnScroll() {
   var prevScrollpos = window.pageYOffset;
@@ -24815,7 +24801,7 @@ function headerOnScroll() {
 }
 
 var headerMoveLinks = function headerMoveLinks() {
-  if (window.innerWidth >= 1200) {
+  if (window.innerWidth >= 992) {
     document.querySelector('.header .container-fluid').append(document.querySelector('.header__nav-right'));
   } else {
     document.querySelector('.header__nav').append(document.querySelector('.header__nav-right'));
@@ -24825,20 +24811,19 @@ var headerMoveLinks = function headerMoveLinks() {
 
 window.addEventListener('resize', headerMoveLinks);
 $(function () {
-  $("a[href*='#']:not([href='#])").click(function () {
-    var target = $(this).attr("href");
-    $('html,body').stop().animate({
-      scrollTop: $(target).offset().top - 10
-    }, 1000);
-    event.preventDefault();
-    $('.header__nav').removeClass('header__nav--entered');
-    $('.nav-toggle').removeClass('nav-toggle--entered');
-    $('body').removeClass('stop-scrolling');
-
-    if ($('body').hasClass('stop-scrolling') == false) {
-      $('body').unbind('touchmove');
-    }
-  });
+  // $("a[href*='#']:not([href='#])").click(function () {
+  //     let target = $(this).attr("href");
+  //     $('html,body').stop().animate({
+  //         scrollTop: $(target).offset().top - 10
+  //     }, 1000);
+  //     event.preventDefault();
+  //     $('.header__nav').removeClass('header__nav--entered');
+  //     $('.nav-toggle').removeClass('nav-toggle--entered');
+  //     $('body').removeClass('stop-scrolling');
+  //     if ($('body').hasClass('stop-scrolling') == false) {
+  //         $('body').unbind('touchmove')
+  //     }
+  // });
   $('a[href^="#"]').click(function () {
     document.getElementById("header").style.top = "16px";
   });
@@ -24932,12 +24917,14 @@ function owlCarousels() {
   var _workCarousel$owlCaro;
 
   var workCarousel = $('.work__carousel');
+  var testimonialsCarousel = $('.testimonials__carousel');
   workCarousel.owlCarousel((_workCarousel$owlCaro = {
     loop: false,
     autoplay: true,
     lazyLoad: true,
     items: 2,
     margin: 0,
+    startPosition: 2,
     center: true,
     nav: false,
     // autoWidth: true,
@@ -24952,8 +24939,12 @@ function owlCarousels() {
     },
     996: {
       items: 1,
-      stagePadding: 250,
+      stagePadding: 150,
       margin: 0
+    },
+    1200: {
+      items: 1,
+      stagePadding: 250
     },
     1400: {
       items: 1,
@@ -24994,6 +24985,22 @@ function owlCarousels() {
 
     e.preventDefault();
   });
+  testimonialsCarousel.owlCarousel({
+    // autoplayHoverPause: true,
+    autoplay: false,
+    loop: true,
+    nav: false,
+    dots: false,
+    lazyLoad: true,
+    items: 1,
+    margin: 70
+  });
+
+  document.querySelector('.testimonials__owl-btn').onclick = function () {
+    testimonialsCarousel.trigger('next.owl');
+  }; // $('.testimonials__owl-btn').on('click', function () {
+  // });
+
 }
 
 function init() {
@@ -25013,9 +25020,15 @@ function init() {
         setTimeout(function () {
           document.querySelector('.about').addEventListener("mousemove", function (e) {
             Array.from(allRadials).forEach(function (element) {
-              element.style.transitionDelay = "0.05s";
+              // element.style.transitionDelay = "0.05s";
               element.style.transitionDuration = "0.8s";
               element.style.transform = "rotate(" + ((-e.clientX / 10).toFixed(1) - -e.clientY / 7).toFixed(1) + "deg) translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
+            });
+          });
+          document.querySelector('.contact').addEventListener("mousemove", function (e) {
+            Array.from(allRadials).forEach(function (element) {
+              element.style.transitionDuration = "0.8s";
+              element.style.transform = "rotate(" + ((-e.clientX / 23).toFixed(1) - -e.clientY / 17).toFixed(1) + "deg) translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
             });
           });
         }, 3500); // }
@@ -25079,8 +25092,8 @@ function init() {
       var magicLine = document.createElement('li');
       magicLine.classList.add('magic-line');
       mainNav.append(magicLine);
-      var magicPointWidth = parseFloat(getComputedStyle(document.querySelector('.magic-line'), null).width.replace("px", ""));
-      var activeElement = document.querySelector('#navList .active');
+      var magicPointWidth = parseFloat(getComputedStyle(document.querySelector('.magic-line'), null).width.replace("px", "")); // let activeElement = document.querySelector('#navList .active');
+
       var navItems = document.querySelectorAll('.header__nav-li');
 
       var _iterator = _createForOfIteratorHelper(navItems),
@@ -25108,13 +25121,27 @@ function init() {
   }
 
   if (document.querySelector('.welcome')) {
+    function logoBarDimensions() {
+      if (typeof document.querySelector('.welcome') != 'undefined' && document.querySelector('.welcome') != null) {
+        var logoBarWidth = document.querySelector('.welcome__logo-bar').getBoundingClientRect().width / 2;
+        var logoBarHeight = document.querySelector('.welcome__logo-bar').getBoundingClientRect().height;
+        $('.welcome__logo-bar-helper').css('width', logoBarWidth + 'px');
+        $('.welcome__logo-bar-helper').css('height', logoBarHeight + 'px');
+        document.getElementById('footer').style.display = "none";
+      }
+    }
+
+    $(window).resize(function () {
+      logoBarDimensions();
+    });
     document.getElementById("header").style.display = "none";
+    logoBarDimensions();
   }
 }
 
 init();
 swup.on('contentReplaced', init);
-},{"owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","jquery-mousewheel":"node_modules/jquery-mousewheel/jquery.mousewheel.js","bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","perfect-scrollbar":"node_modules/perfect-scrollbar/dist/perfect-scrollbar.esm.js","aos":"node_modules/aos/dist/aos.js","swup":"node_modules/swup/lib/index.js","@swup/overlay-theme":"node_modules/@swup/overlay-theme/lib/index.js","./scripts/logoBarScript.js":"scripts/logoBarScript.js","./scripts/headerScript.js":"scripts/headerScript.js"}],"../../../../AppData/Roaming/npm-cache/_npx/12956/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","jquery-mousewheel":"node_modules/jquery-mousewheel/jquery.mousewheel.js","bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","perfect-scrollbar":"node_modules/perfect-scrollbar/dist/perfect-scrollbar.esm.js","aos":"node_modules/aos/dist/aos.js","swup":"node_modules/swup/lib/index.js","@swup/overlay-theme":"node_modules/@swup/overlay-theme/lib/index.js","./scripts/logoBarScript.js":"scripts/logoBarScript.js","./scripts/headerScript.js":"scripts/headerScript.js"}],"../../../../AppData/Roaming/npm-cache/_npx/13384/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -25142,7 +25169,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51978" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54731" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -25318,5 +25345,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/12956/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/13384/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
 //# sourceMappingURL=/app.c328ef1a.js.map

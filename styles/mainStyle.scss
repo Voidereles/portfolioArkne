@@ -56,7 +56,7 @@ html.is-animating .transition-fade {
     transition: 0.5s;
 
     .container-fluid {
-        height: 52px;
+        height: 60px;
         position: relative;
         background: transparent;
         border-radius: .0010px;
@@ -105,10 +105,6 @@ html.is-animating .transition-fade {
 
 
     .nav-toggle {
-        // position: fixed;
-        top: 1rem;
-        right: 2.5rem;
-        margin-right: 1rem;
         z-index: 1024;
         display: none;
         background: none;
@@ -117,17 +113,32 @@ html.is-animating .transition-fade {
         height: 48px;
         align-items: center;
 
+        background: $smallBtnGradient;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: $durationM;
+        box-shadow: 4px 4px 8px $neuShadow1,
+            -4px -4px 8px $neuShadow2;
+
+
+        &:active {
+            transform: scale(0.9);
+        }
+
         svg {
             color: $pirateBlack;
             transition: $bezierFastoutSlowin 0.5s;
             top: 50%;
-            left: calc(50% + 1.7px);
+            left: 50%;
             position: absolute;
             width: 28px;
             height: 28px;
+            z-index: 1;
+
 
             path {
-                fill: white;
+                fill: $spaceColor;
                 transition: $bezierFastoutSlowin 0.5s;
             }
         }
@@ -698,9 +709,14 @@ html.is-animating .transition-fade {
     color: white;
     position: relative;
     z-index: 3;
+    padding-bottom: 40px;
 
     &__carousel {
         margin-bottom: 1rem;
+
+        .owl-stage-outer {
+            padding-bottom: 2rem;
+        }
     }
 
     &__company-name {
@@ -844,59 +860,313 @@ html.is-animating .transition-fade {
     }
 }
 
-@media (max-width: 480px) {
-    .about {
-        &__img-container {
-            margin-top: 84px;
+.testimonials {
+    background: radial-gradient(#C3D1E4 0%, #DDE7F3 78.9%, #D4E0ED 100%);
+    padding: 100px 70px;
+    margin: 100px;
+    box-shadow: 29px 29px 58px #314c63,
+        -29px -29px 58px #497295;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 
-            &::before {
-                content: none;
-            }
-        }
+    &__container-fluid {
+        max-width: 1700px;
+    }
 
-        &__img {
-            opacity: 0.15;
+    &__heading {
+        font-size: 4rem;
+    }
+
+    &__avatar {
+        max-width: 200px;
+        max-height: 80px;
+        object-fit: contain;
+        object-position: right;
+    }
+
+    &__carousel-container {
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item {
+        .row {
+            position: relative;
+            z-index: 1;
         }
     }
 
-    .work {
-        &__company-name {
-            font-size: $fontSizeBodyL;
-            margin: 2rem 0 -2rem 0;
+    &__place {
+        font-weight: 400;
+        color: $spaceColor;
+    }
+
+    &__text {
+        height: 100%;
+        padding: 70px 0;
+        position: relative;
+        font-weight: 400;
+        font-size: $fontSizeBodyL;
+        overflow: visible;
+        color: $spaceColor;
+    }
+
+    &__quote-sign {
+        opacity: 0.1;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        margin: 0 0.25rem;
+
+        &--right {
+            top: initial;
+            left: initial;
+            right: 0;
+            bottom: 0;
         }
+    }
 
-        .owl-stage {
-            padding-left: 1rem !important;
-            padding-bottom: 3rem;
-        }
+    path {
+        fill: $queenBlue;
+    }
 
-        &__item {
-            &-content {
-                margin: 0;
-                margin-top: 3rem;
-            }
 
-            &-content-inner {
-                padding: 2rem;
-            }
+    &__owl-btn {
+        background: $smallBtnGradient;
+        width: 60px;
+        height: 42px;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: $durationM;
+        box-shadow: 4px 4px 8px $neuShadow1,
+            -4px -4px 8px $neuShadow2;
+        margin-top: -1rem;
 
-            &-title {
-                font-size: $fontSizeH3;
-                letter-spacing: 0.65px;
-            }
-
-            &-categories {
-                font-size: $fontSizeBodyXS;
-            }
-
-            &.last {
-                margin-right: -2rem;
-            }
-        }
-
-        &__btn {
-            margin: 0;
+        &::before {
+            opacity: 0;
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
             width: 100%;
+            height: 100%;
+            background: $main-blue;
+            background: $bigBtnHoverGradient;
+            transition: $durationM;
+            border-radius: 1rem;
+            transform: translate(-50%, -50%);
+        }
+
+        svg {
+            // fill: white;
+            fill: $spaceColor;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+}
+
+.contact {
+    min-height: 70vh;
+    overflow: hidden;
+    color: $greyGainsboro;
+    padding-bottom: 5rem;
+
+    &__heading,
+    &__subheading {
+        color: $greyGainsboro;
+    }
+
+    &__radial-2 {
+        top: 19vh;
+        left: 75%;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+        gap: 1.5rem;
+        grid-auto-flow: dense;
+    }
+
+    &__form-container.span-2 {
+        grid-column: span 2;
+    }
+
+    &__label {
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    &__input {
+        position: relative;
+        padding: 1rem 1.25rem 0.75rem 1.25rem;
+        width: 100%;
+        outline: 0;
+        border: 0;
+        color: white;
+        border-left: none;
+        border-radius: 0.5rem;
+        background: $queenBlue;
+        box-shadow: inset 3px 3px 7px #314c63,
+            inset -3px -3px 7px #497295;
+
+        &::placeholder {
+            color: white;
+            opacity: 0.4;
+        }
+
+        // background: linear-gradient(145deg, #375670, #416685);
+        // box-shadow: 3px 3px 7px #314c63,
+        //     -3px -3px 7px #497295;
+
+    }
+
+    &__form-btn {
+        background: linear-gradient(145deg, #416685, #375670);
+        width: 60px;
+        height: 42px;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: $durationM;
+        box-shadow: 5px 5px 9px #314c63,
+            -5px -5px 9px #497295;
+        margin-top: -1rem;
+        color: $greyGainsboro;
+        width: 80%;
+        min-width: 170px;
+
+        &::before {
+            opacity: 0;
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, #375670, #416685);
+            transition: $durationM;
+            border-radius: 1rem;
+            transform: translate(-50%, -50%);
+            box-shadow: none;
+        }
+
+        span {
+            position: relative;
+            z-index: 2;
+        }
+
+        svg {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 2;
+            transition: $durationXL $cubicBezier;
+
+            path {
+                fill: $greyGainsboro;
+            }
+        }
+
+        &:hover {
+            box-shadow: 5px 5px 9px #314c63,
+                -5px -5px 9px #497295;
+            color: $greyGainsboro;
+
+            &::before {
+                opacity: 1;
+            }
+
+            svg {
+                transform: translateX(10px);
+            }
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+
+    &__description {
+        font-size: $fontSizeBodyXS;
+    }
+}
+
+.footer {
+    background: linear-gradient(145deg, #416685, #375670);
+    box-shadow: 16px 16px 29px #385772,
+        -16px -16px 29px #426786;
+    padding: 3rem 0;
+    color: $greyGainsboro;
+    font-size: $fontSizeBodyXS;
+    line-height: 1.8;
+
+
+    &__logo-arkne,
+    &__logo-group {
+        path {
+            fill: $greyGainsboro;
+        }
+    }
+
+    &__mail,
+    &__heading {
+        color: $greyGainsboro;
+        transition: $durationM;
+    }
+
+    &__heading {
+        margin-bottom: 0.25rem;
+    }
+
+    &__mail:hover {
+        color: $beauBlue;
+    }
+}
+
+@media (max-width:1400px) and (orientation:landscape) {
+    .testimonials {
+        &__heading {
+            font-size: $fontSizeH1;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .about {
+        .container-fluid .row {
+            min-height: initial;
+            padding: 2.5rem 0;
+        }
+
+        &__img-container {
+            right: calc(-9/12 * 100% + 2*128px);
+            height: 100%;
+            top: calc(50% - 25vh);
         }
     }
 }
@@ -905,8 +1175,6 @@ html.is-animating .transition-fade {
     .welcome__container {
         padding: 42px;
     }
-
-
 
     .header {
         bottom: initial;
@@ -927,21 +1195,21 @@ html.is-animating .transition-fade {
 
             &.scrolled {
                 background: white;
+                padding: 0 0.5rem;
 
-                .header__lang-all {
-                    top: initial;
-                    width: auto;
+                .header__logo-container {
+                    padding: 0.5rem;
+                }
 
-                    .container {
-                        margin: 0;
-                    }
+                .nav-toggle {
+                    transforM: scale(0.85);
                 }
             }
         }
 
 
         &__logo {
-            padding: 0;
+            padding-left: 0.5rem;
 
             &-img {
                 max-height: 32px;
@@ -1003,12 +1271,12 @@ html.is-animating .transition-fade {
 
         .nav-toggle {
             display: flex;
-            // background: $clern-lightGreen;
-            background: $queenBlue;
+            // background: $queenBlue;
             margin-right: 0;
             width: 48px;
             height: 48px;
             border-radius: 50%;
+            transition: $durationM;
 
             &__inner {
                 width: 32px;
@@ -1042,9 +1310,10 @@ html.is-animating .transition-fade {
     }
 
     .about {
-        .container-fluid .row {
-            min-height: initial;
-            padding: 2.5rem 0;
+        &__img-container {
+            right: calc(100% - 300px);
+            height: calc(100vh - 100px);
+            top: calc(50% - 50vh + 70px);
         }
 
         &__subheading {
@@ -1055,8 +1324,74 @@ html.is-animating .transition-fade {
             font-size: $fontSizeH2;
         }
     }
+
+    .testimonials {
+        margin: 20px;
+        padding: 20px 0.5rem;
+
+        &__heading {
+            font-size: $fontSizeH2;
+        }
+    }
 }
 
+
+@media (max-width: 480px) {
+    .about {
+        &__img-container {
+            margin-top: 84px;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        &__img {
+            opacity: 0.15;
+        }
+    }
+
+    .work {
+        &__company-name {
+            font-size: $fontSizeBodyL;
+            margin: 2rem 0 -2rem 0;
+        }
+
+        .owl-stage {
+            padding-left: 1rem !important;
+            padding-bottom: 3rem;
+        }
+
+        &__item {
+            &-content {
+                margin: 0;
+                margin-top: 3rem;
+            }
+
+            &-content-inner {
+                padding: 2rem;
+            }
+
+            &-title {
+                font-size: $fontSizeH3;
+                letter-spacing: 0.65px;
+            }
+
+            &-categories {
+                font-size: $fontSizeBodyXS;
+            }
+
+            &.last {
+                margin-right: -2rem;
+            }
+        }
+
+        &__btn {
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
 
 
 @media (min-width:1600px) {

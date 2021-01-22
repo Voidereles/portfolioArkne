@@ -35,6 +35,7 @@ $(window).resize(function () {
 function owlCarousels() {
 
     const workCarousel = $('.work__carousel');
+    const testimonialsCarousel = $('.testimonials__carousel');
 
     workCarousel.owlCarousel({
         loop: false,
@@ -42,6 +43,7 @@ function owlCarousels() {
         lazyLoad: true,
         items: 2,
         margin: 0,
+        startPosition: 2,
         center: true,
         nav: false,
         // autoWidth: true,
@@ -60,8 +62,12 @@ function owlCarousels() {
             },
             996: {
                 items: 1,
-                stagePadding: 250,
+                stagePadding: 150,
                 margin: 0
+            },
+            1200: {
+                items: 1,
+                stagePadding: 250,
             },
             1400: {
                 items: 1,
@@ -105,6 +111,25 @@ function owlCarousels() {
         }
         e.preventDefault();
     });
+
+    testimonialsCarousel.owlCarousel({
+        // autoplayHoverPause: true,
+        autoplay: false,
+        loop: true,
+        nav: false,
+        dots: false,
+        lazyLoad: true,
+        items: 1,
+        margin: 70
+    });
+
+    document.querySelector('.testimonials__owl-btn').onclick = function () {
+        testimonialsCarousel.trigger('next.owl')
+    }
+
+    // $('.testimonials__owl-btn').on('click', function () {
+
+    // });
 }
 
 function init() {
@@ -128,9 +153,16 @@ function init() {
                 setTimeout(function () {
                     document.querySelector('.about').addEventListener("mousemove", (e) => {
                         Array.from(allRadials).forEach(element => {
-                            element.style.transitionDelay = "0.05s";
+                            // element.style.transitionDelay = "0.05s";
                             element.style.transitionDuration = "0.8s";
                             element.style.transform = "rotate(" + (((-e.clientX) / 10).toFixed(1) - ((-e.clientY) / 7)).toFixed(1) + "deg) translateX(" + ((-e.clientX) / 40).toFixed(0) + "px)" + "translateY(" + ((-e.clientY) / 33).toFixed(0) + "px)";
+                        });
+                    });
+
+                    document.querySelector('.contact').addEventListener("mousemove", (e) => {
+                        Array.from(allRadials).forEach(element => {
+                            element.style.transitionDuration = "0.8s";
+                            element.style.transform = "rotate(" + (((-e.clientX) / 23).toFixed(1) - ((-e.clientY) / 17)).toFixed(1) + "deg) translateX(" + ((-e.clientX) / 40).toFixed(0) + "px)" + "translateY(" + ((-e.clientY) / 33).toFixed(0) + "px)";
                         });
                     });
                 }, 3500);
@@ -197,7 +229,7 @@ function init() {
         magicLine.classList.add('magic-line');
         mainNav.append(magicLine);
         const magicPointWidth = parseFloat(getComputedStyle(document.querySelector('.magic-line'), null).width.replace("px", ""));
-        let activeElement = document.querySelector('#navList .active');
+        // let activeElement = document.querySelector('#navList .active');
         const navItems = document.querySelectorAll('.header__nav-li');
 
         for (const navItem of navItems) {
@@ -210,7 +242,23 @@ function init() {
     }
 
     if (document.querySelector('.welcome')) {
+        function logoBarDimensions() {
+            if (typeof (document.querySelector('.welcome')) != 'undefined' && document.querySelector('.welcome') != null) {
+                let logoBarWidth = document.querySelector('.welcome__logo-bar').getBoundingClientRect().width / 2;
+                let logoBarHeight = document.querySelector('.welcome__logo-bar').getBoundingClientRect().height;
+                $('.welcome__logo-bar-helper').css('width', logoBarWidth + 'px');
+                $('.welcome__logo-bar-helper').css('height', logoBarHeight + 'px');
+                document.getElementById('footer').style.display = "none";
+            }
+        }
+
+
+        $(window).resize(function () {
+            logoBarDimensions();
+        });
+
         document.getElementById("header").style.display = "none";
+        logoBarDimensions();
     }
 
 
