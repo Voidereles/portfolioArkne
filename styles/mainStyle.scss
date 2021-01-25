@@ -619,10 +619,14 @@ html.is-animating .transition-fade {
         // min-height: 100vh;
         // max-height: 762px;
 
-        .row {
-            min-height: calc(100vh - 100px);
-            // max-height: 762px;
-        }
+
+    }
+
+    &__row {
+
+        min-height: calc(100vh - 100px);
+        // max-height: 762px;
+
     }
 
     &__text {
@@ -857,6 +861,22 @@ html.is-animating .transition-fade {
         color: $pirateBlack;
         font-weight: 600;
         letter-spacing: 0.45px;
+    }
+}
+
+.services {
+    position: relative;
+    z-index: 3;
+
+    .container-fluid {
+        max-width: 1700px;
+    }
+
+    &__place-img {
+        max-height: 55vh;
+        width: 100%;
+        object-fit: cover;
+        object-position: 33% 36%;
     }
 }
 

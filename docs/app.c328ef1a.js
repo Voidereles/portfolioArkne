@@ -24776,18 +24776,7 @@ function toComment(sourceMap) {
 /******/ ]);
 });
 },{}],"scripts/logoBarScript.js":[function(require,module,exports) {
-function logoBarDimensions() {
-  if (typeof document.querySelector('.welcome') != 'undefined' && document.querySelector('.welcome') != null) {
-    var logoBarWidth = document.querySelector('.welcome__logo-bar').getBoundingClientRect().width / 2;
-    var logoBarHeight = document.querySelector('.welcome__logo-bar').getBoundingClientRect().height;
-    $('.welcome__logo-bar-helper').css('width', logoBarWidth + 'px');
-    $('.welcome__logo-bar-helper').css('height', logoBarHeight + 'px');
-  }
-}
 
-$(window).resize(function () {
-  logoBarDimensions();
-});
 },{}],"scripts/headerScript.js":[function(require,module,exports) {
 function headerOnScroll() {
   var prevScrollpos = window.pageYOffset;
@@ -25015,8 +25004,27 @@ function owlCarousels() {
 }
 
 function init() {
+  var cursor = document.querySelector('.cursor');
+
+  if (document.querySelector('.cursor')) {
+    var idle;
+    var x, y;
+
+    document.onmousemove = function (e) {
+      x = e.clientX;
+      y = e.clientY;
+      cursor.style.opacity = 1;
+      clearInterval(idle);
+      idle = setTimeout(function () {
+        cursor.style.opacity = 0;
+      }, 3000);
+      cursor.style.top = '0';
+      cursor.style.left = '0';
+      cursor.style.transform = "translateX(calc(".concat(x, "px - 50% + 24px)) translateY(calc(").concat(y, "px - 50%  + 24px))");
+    };
+  }
+
   if (document.querySelector('.about')) {
-    owlCarousels();
     document.getElementById("header").style.display = "flex";
 
     if (window.innerWidth > 992) {
@@ -25031,9 +25039,15 @@ function init() {
         setTimeout(function () {
           document.querySelector('.about').addEventListener("mousemove", function (e) {
             Array.from(allRadials).forEach(function (element) {
-              element.style.transitionDelay = "0.05s";
+              // element.style.transitionDelay = "0.05s";
               element.style.transitionDuration = "0.8s";
               element.style.transform = "rotate(" + ((-e.clientX / 10).toFixed(1) - -e.clientY / 7).toFixed(1) + "deg) translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
+            });
+          });
+          document.querySelector('.contact').addEventListener("mousemove", function (e) {
+            Array.from(allRadials).forEach(function (element) {
+              element.style.transitionDuration = "0.8s";
+              element.style.transform = "rotate(" + ((-e.clientX / 23).toFixed(1) - -e.clientY / 17).toFixed(1) + "deg) translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
             });
           });
         }, 3500); // }
@@ -25056,39 +25070,29 @@ function init() {
           document.querySelector('.cursor__plus').style.transform = "scale(0)";
         };
       });
-      var hoverPortfolio = document.querySelector('.work__carousel');
-
-      hoverPortfolio.onmouseenter = function (el) {
-        cursor.style.width = '42px';
-        cursor.style.height = '42px';
-        cursor.style.background = "white";
-        document.querySelector('.cursor__resize').style.transform = "scale(1)";
-      };
-
-      hoverPortfolio.onmouseleave = function (el) {
-        cursor.style.width = '18px';
-        cursor.style.height = '18px';
-        cursor.style.background = "rgba(61, 95, 124, 0.2)";
-        document.querySelector('.cursor__resize').style.transform = "scale(0)";
-      };
-
-      var cursor = document.querySelector('.cursor');
-      var idle;
-      var x, y;
-
-      document.onmousemove = function (e) {
-        x = e.clientX;
-        y = e.clientY;
-        cursor.style.opacity = 1;
-        clearInterval(idle);
-        idle = setTimeout(function () {
-          cursor.style.opacity = 0;
-        }, 3000);
-        cursor.style.top = '0';
-        cursor.style.left = '0';
-        cursor.style.transform = "translateX(calc(".concat(x, "px - 50% + 24px)) translateY(calc(").concat(y, "px - 50%  + 24px))");
-      };
     }
+  }
+
+  if (document.querySelector('.testimonials')) {
+    owlCarousels();
+  }
+
+  if (document.querySelector('.work')) {
+    var hoverPortfolio = document.querySelector('.work__carousel');
+
+    hoverPortfolio.onmouseenter = function (el) {
+      cursor.style.width = '42px';
+      cursor.style.height = '42px';
+      cursor.style.background = "white";
+      document.querySelector('.cursor__resize').style.transform = "scale(1)";
+    };
+
+    hoverPortfolio.onmouseleave = function (el) {
+      cursor.style.width = '18px';
+      cursor.style.height = '18px';
+      cursor.style.background = "rgba(61, 95, 124, 0.2)";
+      document.querySelector('.cursor__resize').style.transform = "scale(0)";
+    };
   }
 
   if (document.querySelector('.header')) {
@@ -25126,8 +25130,23 @@ function init() {
   }
 
   if (document.querySelector('.welcome')) {
+    var logoBarDimensions = function logoBarDimensions() {
+      if (typeof document.querySelector('.welcome') != 'undefined' && document.querySelector('.welcome') != null) {
+        var logoBarWidth = document.querySelector('.welcome__logo-bar').getBoundingClientRect().width / 2;
+        var logoBarHeight = document.querySelector('.welcome__logo-bar').getBoundingClientRect().height;
+        $('.welcome__logo-bar-helper').css('width', logoBarWidth + 'px');
+        $('.welcome__logo-bar-helper').css('height', logoBarHeight + 'px');
+        document.getElementById('footer').style.display = "none";
+      }
+    };
+
+    $(window).resize(function () {
+      logoBarDimensions();
+    });
     document.getElementById("header").style.display = "none";
     logoBarDimensions();
+  } else {
+    document.getElementById('footer').style.display = "block";
   }
 }
 
@@ -25161,7 +25180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39431" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36037" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

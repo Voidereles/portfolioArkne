@@ -25004,8 +25004,27 @@ function owlCarousels() {
 }
 
 function init() {
+  var cursor = document.querySelector('.cursor');
+
+  if (document.querySelector('.cursor')) {
+    var idle;
+    var x, y;
+
+    document.onmousemove = function (e) {
+      x = e.clientX;
+      y = e.clientY;
+      cursor.style.opacity = 1;
+      clearInterval(idle);
+      idle = setTimeout(function () {
+        cursor.style.opacity = 0;
+      }, 3000);
+      cursor.style.top = '0';
+      cursor.style.left = '0';
+      cursor.style.transform = "translateX(calc(".concat(x, "px - 50% + 24px)) translateY(calc(").concat(y, "px - 50%  + 24px))");
+    };
+  }
+
   if (document.querySelector('.about')) {
-    owlCarousels();
     document.getElementById("header").style.display = "flex";
 
     if (window.innerWidth > 992) {
@@ -25051,39 +25070,29 @@ function init() {
           document.querySelector('.cursor__plus').style.transform = "scale(0)";
         };
       });
-      var hoverPortfolio = document.querySelector('.work__carousel');
-
-      hoverPortfolio.onmouseenter = function (el) {
-        cursor.style.width = '42px';
-        cursor.style.height = '42px';
-        cursor.style.background = "white";
-        document.querySelector('.cursor__resize').style.transform = "scale(1)";
-      };
-
-      hoverPortfolio.onmouseleave = function (el) {
-        cursor.style.width = '18px';
-        cursor.style.height = '18px';
-        cursor.style.background = "rgba(61, 95, 124, 0.2)";
-        document.querySelector('.cursor__resize').style.transform = "scale(0)";
-      };
-
-      var cursor = document.querySelector('.cursor');
-      var idle;
-      var x, y;
-
-      document.onmousemove = function (e) {
-        x = e.clientX;
-        y = e.clientY;
-        cursor.style.opacity = 1;
-        clearInterval(idle);
-        idle = setTimeout(function () {
-          cursor.style.opacity = 0;
-        }, 3000);
-        cursor.style.top = '0';
-        cursor.style.left = '0';
-        cursor.style.transform = "translateX(calc(".concat(x, "px - 50% + 24px)) translateY(calc(").concat(y, "px - 50%  + 24px))");
-      };
     }
+  }
+
+  if (document.querySelector('.testimonials')) {
+    owlCarousels();
+  }
+
+  if (document.querySelector('.work')) {
+    var hoverPortfolio = document.querySelector('.work__carousel');
+
+    hoverPortfolio.onmouseenter = function (el) {
+      cursor.style.width = '42px';
+      cursor.style.height = '42px';
+      cursor.style.background = "white";
+      document.querySelector('.cursor__resize').style.transform = "scale(1)";
+    };
+
+    hoverPortfolio.onmouseleave = function (el) {
+      cursor.style.width = '18px';
+      cursor.style.height = '18px';
+      cursor.style.background = "rgba(61, 95, 124, 0.2)";
+      document.querySelector('.cursor__resize').style.transform = "scale(0)";
+    };
   }
 
   if (document.querySelector('.header')) {
@@ -25136,12 +25145,14 @@ function init() {
     });
     document.getElementById("header").style.display = "none";
     logoBarDimensions();
+  } else {
+    document.getElementById('footer').style.display = "block";
   }
 }
 
 init();
 swup.on('contentReplaced', init);
-},{"owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","jquery-mousewheel":"node_modules/jquery-mousewheel/jquery.mousewheel.js","bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","perfect-scrollbar":"node_modules/perfect-scrollbar/dist/perfect-scrollbar.esm.js","aos":"node_modules/aos/dist/aos.js","swup":"node_modules/swup/lib/index.js","@swup/overlay-theme":"node_modules/@swup/overlay-theme/lib/index.js","./scripts/logoBarScript.js":"scripts/logoBarScript.js","./scripts/headerScript.js":"scripts/headerScript.js"}],"../../../../AppData/Roaming/npm-cache/_npx/13384/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","jquery-mousewheel":"node_modules/jquery-mousewheel/jquery.mousewheel.js","bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","perfect-scrollbar":"node_modules/perfect-scrollbar/dist/perfect-scrollbar.esm.js","aos":"node_modules/aos/dist/aos.js","swup":"node_modules/swup/lib/index.js","@swup/overlay-theme":"node_modules/@swup/overlay-theme/lib/index.js","./scripts/logoBarScript.js":"scripts/logoBarScript.js","./scripts/headerScript.js":"scripts/headerScript.js"}],"../../../../AppData/Roaming/npm-cache/_npx/4092/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -25169,7 +25180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54731" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59097" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -25345,5 +25356,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/13384/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/4092/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
 //# sourceMappingURL=/app.c328ef1a.js.map

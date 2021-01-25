@@ -34178,7 +34178,7 @@ html.is-animating .transition-fade {
   height: 100%;
 }
 
-.about .container-fluid .row {
+.about__row {
   min-height: calc(100vh - 100px);
 }
 
@@ -34433,6 +34433,24 @@ html.is-animating .transition-fade {
   color: #373838;
   font-weight: 600;
   letter-spacing: 0.45px;
+}
+
+.services {
+  position: relative;
+  z-index: 3;
+}
+
+.services .container-fluid {
+  max-width: 1700px;
+}
+
+.services__place-img {
+  max-height: 55vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 33% 36%;
+     object-position: 33% 36%;
 }
 
 .testimonials {

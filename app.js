@@ -133,9 +133,30 @@ function owlCarousels() {
 }
 
 function init() {
+    const cursor = document.querySelector('.cursor');
+    if (document.querySelector('.cursor')) {
+        let idle;
+        let x, y;
+        document.onmousemove = e => {
+            x = e.clientX;
+            y = e.clientY;
+
+            cursor.style.opacity = 1;
+            clearInterval(idle);
+
+            idle = setTimeout(function () {
+                cursor.style.opacity = 0;
+            }, 3000);
+
+            cursor.style.top = '0';
+            cursor.style.left = '0';
+            cursor.style.transform = `translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))`;
+        };
+    }
+
     if (document.querySelector('.about')) {
 
-        owlCarousels();
+
 
         document.getElementById("header").style.display = "flex";
         if (window.innerWidth > 992) {
@@ -186,41 +207,34 @@ function init() {
                 }
             });
 
-            const hoverPortfolio = document.querySelector('.work__carousel');
-            hoverPortfolio.onmouseenter = el => {
-                cursor.style.width = '42px';
-                cursor.style.height = '42px';
-                cursor.style.background = "white";
-                document.querySelector('.cursor__resize').style.transform = "scale(1)";
-            }
-            hoverPortfolio.onmouseleave = el => {
-                cursor.style.width = '18px';
-                cursor.style.height = '18px';
-                cursor.style.background = "rgba(61, 95, 124, 0.2)";
-                document.querySelector('.cursor__resize').style.transform = "scale(0)";
-            }
 
-            let cursor = document.querySelector('.cursor');
-            let idle;
-            let x, y;
-            document.onmousemove = e => {
-                x = e.clientX;
-                y = e.clientY;
-
-                cursor.style.opacity = 1;
-                clearInterval(idle);
-
-                idle = setTimeout(function () {
-                    cursor.style.opacity = 0;
-                }, 3000);
-
-                cursor.style.top = '0';
-                cursor.style.left = '0';
-                cursor.style.transform = `translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))`;
-            };
 
 
         }
+    }
+
+
+
+    if (document.querySelector('.testimonials')) {
+        owlCarousels();
+    }
+
+    if (document.querySelector('.work')) {
+
+        const hoverPortfolio = document.querySelector('.work__carousel');
+        hoverPortfolio.onmouseenter = el => {
+            cursor.style.width = '42px';
+            cursor.style.height = '42px';
+            cursor.style.background = "white";
+            document.querySelector('.cursor__resize').style.transform = "scale(1)";
+        }
+        hoverPortfolio.onmouseleave = el => {
+            cursor.style.width = '18px';
+            cursor.style.height = '18px';
+            cursor.style.background = "rgba(61, 95, 124, 0.2)";
+            document.querySelector('.cursor__resize').style.transform = "scale(0)";
+        }
+
     }
 
     if (document.querySelector('.header')) {
@@ -259,6 +273,9 @@ function init() {
 
         document.getElementById("header").style.display = "none";
         logoBarDimensions();
+    } else {
+
+        document.getElementById('footer').style.display = "block";
     }
 
 
