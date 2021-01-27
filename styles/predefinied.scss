@@ -177,7 +177,9 @@ h6,
 }
 
 
-
+.flip-horizontal {
+    transform: scaleX(-1);
+}
 
 
 @keyframes hueRotate {

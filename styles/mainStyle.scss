@@ -23,6 +23,11 @@ body {
     font-weight: 400;
 }
 
+::selection {
+    background: $queenBlue;
+    color: white;
+}
+
 ::-webkit-scrollbar {
     width: 15px;
     background-color: black;
@@ -948,7 +953,7 @@ html.is-animating .transition-fade {
 
     .evaluation {
         &__img-container {
-            overflow: hidden;
+            // overflow: hidden;
             position: relative;
         }
 

@@ -143,6 +143,11 @@ h6,
   font-weight: bold;
 }
 
+.flip-horizontal {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
 @-webkit-keyframes hueRotate {
   from {
     -webkit-filter: hue-rotate(0deg);

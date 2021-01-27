@@ -33372,6 +33372,11 @@ h1, h2, h3, h4, h5, h6,
   font-weight: bold;
 }
 
+.flip-horizontal {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
 @-webkit-keyframes hueRotate {
   from {
     -webkit-filter: hue-rotate(0deg);
@@ -33584,6 +33589,16 @@ body {
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
+}
+
+::-moz-selection {
+  background: #3D5F7C;
+  color: white;
+}
+
+::selection {
+  background: #3D5F7C;
+  color: white;
 }
 
 ::-webkit-scrollbar {
@@ -34531,7 +34546,6 @@ html.is-animating .transition-fade {
 }
 
 .services .evaluation__img-container {
-  overflow: hidden;
   position: relative;
 }
 
