@@ -33583,6 +33583,7 @@ body {
   -ms-user-modify: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
+  font-weight: 400;
 }
 
 ::-webkit-scrollbar {
@@ -33637,18 +33638,8 @@ html.is-animating .transition-fade {
   padding: 0 0.75rem;
 }
 
-.header .container-fluid.scrolled .header {
-  color: white;
-}
-
-.header .container-fluid.scrolled .header__logo-img {
-  max-height: 32px;
-  margin-left: 1.5rem;
-  position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  overflow: hidden;
+.header .container-fluid.scrolled .header__logo-container {
+  margin-left: 1rem;
 }
 
 .header__logo {
@@ -34475,6 +34466,21 @@ html.is-animating .transition-fade {
   margin-left: 3rem;
 }
 
+.services__features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 15;
+}
+
 .services__icon-container {
   background: linear-gradient(145deg, transparent, #DFE7F1);
   width: 56px;
@@ -34496,19 +34502,32 @@ html.is-animating .transition-fade {
 }
 
 .services__icon {
-  fill: #31344b;
   width: 36px;
   height: 36px;
   z-index: 1;
 }
 
+.services__icon path {
+  fill: #3D5F7C;
+}
+
 .services__feature-title {
   font-size: 2rem;
+  color: #3D5F7C;
+  text-align: center;
 }
 
 .services__feature-description {
   font-size: 1.125rem;
   font-weight: 400;
+  max-width: 320px;
+  text-align: center;
+}
+
+.services__description {
+  max-width: 400px;
+  text-align: left;
+  font-size: 1.25rem;
 }
 
 .services .evaluation__img-container {
@@ -34520,6 +34539,13 @@ html.is-animating .transition-fade {
   margin-top: -90px;
   -webkit-transform: scale3d(-1.3, 1.3, 1.1) translateY(50px);
           transform: scale3d(-1.3, 1.3, 1.1) translateY(50px);
+}
+
+.services .design__brushes {
+  -webkit-transform: translate(16px, 0);
+          transform: translate(16px, 0);
+  -webkit-filter: drop-shadow(1px 0px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(1px 0px 2px rgba(0, 0, 0, 0.25));
 }
 
 .testimonials {
@@ -34890,7 +34916,6 @@ html.is-animating .transition-fade {
   }
   .header .scrolled .header__logo-container {
     padding: 0.5rem;
-    margin-left: 1rem;
   }
   .header .scrolled .nav-toggle {
     transforM: scale(0.85);
