@@ -872,11 +872,76 @@ html.is-animating .transition-fade {
         max-width: 1700px;
     }
 
+    &__section {
+        position: relative;
+    }
+
     &__place-img {
         max-height: 55vh;
         width: 100%;
         object-fit: cover;
         object-position: 33% 36%;
+    }
+
+    &__place-img,
+    &__heading,
+    &__subheading {
+        position: relative;
+        z-index: 3;
+    }
+
+    &__number {
+        font-size: 144px;
+        font-weight: 900;
+        opacity: 0.2;
+        color: $queenBlue;
+    }
+
+    &__section-heading {
+        font-size: 6rem;
+        margin-top: -7.5rem;
+        margin-left: 3rem;
+    }
+
+    &__icon-container {
+        background: $smallBtnGradient;
+        width: 56px;
+        height: 56px;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: $durationM;
+        box-shadow: 4px 4px 8px $neuShadow1,
+            -4px -4px 8px $neuShadow2;
+    }
+
+    &__icon {
+        fill: $spaceColor;
+        width: 36px;
+        height: 36px;
+        z-index: 1;
+    }
+
+    &__feature-title {
+        font-size: $fontSizeH2;
+    }
+
+    &__feature-description {
+        font-size: $fontSizeBodyM;
+        font-weight: 400;
+    }
+
+    .evaluation {
+        &__img-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        &__hand-bulb {
+            margin-top: -90px;
+            transform: scale3d(-1.3, 1.3, 1.1) translateY(50px);
+        }
     }
 }
 
@@ -1212,21 +1277,21 @@ html.is-animating .transition-fade {
         .container-fluid {
             margin-top: 0.75rem;
             min-height: initial;
-
-            &.scrolled {
-                background: white;
-                padding: 0 0.5rem;
-
-                .header__logo-container {
-                    padding: 0.5rem;
-                }
-
-                .nav-toggle {
-                    transforM: scale(0.85);
-                }
-            }
         }
 
+        .scrolled {
+            background: white;
+            padding: 0 0.5rem;
+
+            .header__logo-container {
+                padding: 0.5rem;
+                margin-left: 1rem;
+            }
+
+            .nav-toggle {
+                transforM: scale(0.85);
+            }
+        }
 
         &__logo {
             padding-left: 0.5rem;

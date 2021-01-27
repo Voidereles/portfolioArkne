@@ -34259,6 +34259,10 @@ html.is-animating .transition-fade {
   max-width: 1700px;
 }
 
+.services__section {
+  position: relative;
+}
+
 .services__place-img {
   max-height: 55vh;
   width: 100%;
@@ -34266,6 +34270,71 @@ html.is-animating .transition-fade {
      object-fit: cover;
   -o-object-position: 33% 36%;
      object-position: 33% 36%;
+}
+
+.services__place-img, .services__heading, .services__subheading {
+  position: relative;
+  z-index: 3;
+}
+
+.services__number {
+  font-size: 144px;
+  font-weight: 900;
+  opacity: 0.2;
+  color: #3D5F7C;
+}
+
+.services__section-heading {
+  font-size: 6rem;
+  margin-top: -7.5rem;
+  margin-left: 3rem;
+}
+
+.services__icon-container {
+  background: linear-gradient(145deg, transparent, #DFE7F1);
+  width: 56px;
+  height: 56px;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  -webkit-box-shadow: 4px 4px 8px #8fa5b7, -4px -4px 8px #ffffff94;
+          box-shadow: 4px 4px 8px #8fa5b7, -4px -4px 8px #ffffff94;
+}
+
+.services__icon {
+  fill: #31344b;
+  width: 36px;
+  height: 36px;
+  z-index: 1;
+}
+
+.services__feature-title {
+  font-size: 2rem;
+}
+
+.services__feature-description {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.services .evaluation__img-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.services .evaluation__hand-bulb {
+  margin-top: -90px;
+  -webkit-transform: scale3d(-1.3, 1.3, 1.1) translateY(50px);
+          transform: scale3d(-1.3, 1.3, 1.1) translateY(50px);
 }
 
 .testimonials {
@@ -34630,14 +34699,15 @@ html.is-animating .transition-fade {
     margin-top: 0.75rem;
     min-height: initial;
   }
-  .header .container-fluid.scrolled {
+  .header .scrolled {
     background: white;
     padding: 0 0.5rem;
   }
-  .header .container-fluid.scrolled .header__logo-container {
+  .header .scrolled .header__logo-container {
     padding: 0.5rem;
+    margin-left: 1rem;
   }
-  .header .container-fluid.scrolled .nav-toggle {
+  .header .scrolled .nav-toggle {
     transforM: scale(0.85);
   }
   .header__logo {

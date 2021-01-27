@@ -3791,7 +3791,7 @@ var define;
 
 }));
 
-},{}],"../../../../AppData/Roaming/npm-cache/_npx/6744/node_modules/parcel/node_modules/process/browser.js":[function(require,module,exports) {
+},{}],"node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -14877,7 +14877,7 @@ if ( typeof noGlobal === "undefined" ) {
 return jQuery;
 } );
 
-},{"process":"../../../../AppData/Roaming/npm-cache/_npx/6744/node_modules/parcel/node_modules/process/browser.js"}],"node_modules/popper.js/dist/esm/popper.js":[function(require,module,exports) {
+},{"process":"node_modules/process/browser.js"}],"node_modules/popper.js/dist/esm/popper.js":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
@@ -25152,7 +25152,7 @@ function init() {
 
 init();
 swup.on('contentReplaced', init);
-},{"owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","jquery-mousewheel":"node_modules/jquery-mousewheel/jquery.mousewheel.js","bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","perfect-scrollbar":"node_modules/perfect-scrollbar/dist/perfect-scrollbar.esm.js","aos":"node_modules/aos/dist/aos.js","swup":"node_modules/swup/lib/index.js","@swup/overlay-theme":"node_modules/@swup/overlay-theme/lib/index.js","./scripts/logoBarScript.js":"scripts/logoBarScript.js","./scripts/headerScript.js":"scripts/headerScript.js"}],"../../../../AppData/Roaming/npm-cache/_npx/4092/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js","jquery-mousewheel":"node_modules/jquery-mousewheel/jquery.mousewheel.js","bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","perfect-scrollbar":"node_modules/perfect-scrollbar/dist/perfect-scrollbar.esm.js","aos":"node_modules/aos/dist/aos.js","swup":"node_modules/swup/lib/index.js","@swup/overlay-theme":"node_modules/@swup/overlay-theme/lib/index.js","./scripts/logoBarScript.js":"scripts/logoBarScript.js","./scripts/headerScript.js":"scripts/headerScript.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -25180,7 +25180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59097" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51729" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -25356,5 +25356,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/4092/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
+},{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
 //# sourceMappingURL=/app.c328ef1a.js.map
