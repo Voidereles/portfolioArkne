@@ -30,7 +30,7 @@ window.addEventListener('resize', headerMoveLinks);
 
 $(function () {
 
-    // $("a[href*='#']:not([href='#])").click(function () {
+    // $("a[href*='#']:not([href='#]), a[href="*"] ").click(function () {
     //     let target = $(this).attr("href");
     //     $('html,body').stop().animate({
     //         scrollTop: $(target).offset().top - 10
@@ -38,13 +38,13 @@ $(function () {
     //     event.preventDefault();
 
 
-    //     $('.header__nav').removeClass('header__nav--entered');
-    //     $('.nav-toggle').removeClass('nav-toggle--entered');
-    //     $('body').removeClass('stop-scrolling');
+    //     // $('.header__nav').removeClass('header__nav--entered');
+    //     // $('.nav-toggle').removeClass('nav-toggle--entered');
+    //     // $('body').removeClass('stop-scrolling');
 
-    //     if ($('body').hasClass('stop-scrolling') == false) {
-    //         $('body').unbind('touchmove')
-    //     }
+    //     // if ($('body').hasClass('stop-scrolling') == false) {
+    //     //     $('body').unbind('touchmove')
+    //     // }
     // });
 
 
@@ -55,19 +55,20 @@ $(function () {
 
     });
 
-    $(window).bind('scroll', function () {
-        var currentTop = $(window).scrollTop();
-        var elems = $('.scrollspy');
-        elems.each(function (index) {
-            var elemTop = $(this).offset().top - 100;
-            var elemBottom = elemTop + $(this).height();
-            if (currentTop >= elemTop && currentTop <= elemBottom) {
-                var id = $(this).attr('id');
-                var navElem = $('a[href="#' + id + '"]');
-                navElem.addClass('active').siblings().removeClass('active');
-            }
-        })
-    });
+    // $(window).bind('scroll', function () {
+    //     var currentTop = $(window).scrollTop();
+    //     var elems = $('.scrollspy');
+    //     elems.each(function (index) {
+    //         var elemTop = $(this).offset().top - 10;
+    //         var elemBottom = elemTop + $(this).height();
+    //         if (currentTop >= elemTop && currentTop <= elemBottom) {
+    //             var id = $(this).attr('id');
+    //             var navElem = $('a[href="#' + id + '"]');
+    //             navElem.addClass('active').siblings().removeClass('active');
+    //         }
+    //     })
+    // });
+    //zaznacznaie na kolor
 
     $('.header__logo').click(function () {
         $('html,body').stop().animate({

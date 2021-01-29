@@ -34892,7 +34892,7 @@ html.is-animating .transition-fade {
 }
 
 @media (max-width: 1200px) {
-  .about .container-fluid .row {
+  .about .container-fluid > .row {
     min-height: initial;
     padding: 2.5rem 0;
   }
@@ -35040,10 +35040,25 @@ html.is-animating .transition-fade {
   }
   .testimonials {
     margin: 20px;
+    margin-bottom: 60px;
     padding: 20px 0.5rem;
   }
   .testimonials__heading {
     font-size: 2rem;
+  }
+  .services__section-heading {
+    font-size: 16vw;
+    margin-top: -6rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  .services__illustration {
+    max-width: 100%;
+    height: auto;
+  }
+  .contact__form {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 

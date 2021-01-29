@@ -7,6 +7,8 @@ import AOS from 'aos';
 // import anime from 'animejs/lib/anime.es.js';
 import Swup from 'swup';
 import SwupOverlayTheme from '@swup/overlay-theme';
+import SwupScrollPlugin from '@swup/scroll-plugin';
+
 import './scripts/logoBarScript.js';
 import './scripts/headerScript.js';
 
@@ -15,7 +17,8 @@ const swup = new Swup({
         color: '#3D5F7C',
         duration: 600,
         direction: 'to-right',
-    })]
+    }), new SwupScrollPlugin()],
+
 
 });
 
