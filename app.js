@@ -153,12 +153,12 @@ function init() {
 
             cursor.style.top = '0';
             cursor.style.left = '0';
+            cursor.style.webkitTransform = `translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))`;
+            cursor.style.MozTransform = `translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))`;
+            cursor.style.msTransform = `translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))`;
+            cursor.style.OTransform = `translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))`;
             cursor.style.transform = `translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))`;
-            cursor.style.webkitTransform = "translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))";
-            cursor.style.MozTransform = "translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))";
-            cursor.style.msTransform = "translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))";
-            cursor.style.OTransform = "translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))";
-            cursor.style.transform = "translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))";
+            // cursor.style.transform = `translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))`;
         };
     }
 

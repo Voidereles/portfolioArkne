@@ -25375,12 +25375,11 @@ function init() {
       }, 3000);
       cursor.style.top = '0';
       cursor.style.left = '0';
-      cursor.style.transform = "translateX(calc(".concat(x, "px - 50% + 24px)) translateY(calc(").concat(y, "px - 50%  + 24px))");
-      cursor.style.webkitTransform = "translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))";
-      cursor.style.MozTransform = "translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))";
-      cursor.style.msTransform = "translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))";
-      cursor.style.OTransform = "translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))";
-      cursor.style.transform = "translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))";
+      cursor.style.webkitTransform = "translateX(calc(".concat(x, "px - 50% + 24px)) translateY(calc(").concat(y, "px - 50%  + 24px))");
+      cursor.style.MozTransform = "translateX(calc(".concat(x, "px - 50% + 24px)) translateY(calc(").concat(y, "px - 50%  + 24px))");
+      cursor.style.msTransform = "translateX(calc(".concat(x, "px - 50% + 24px)) translateY(calc(").concat(y, "px - 50%  + 24px))");
+      cursor.style.OTransform = "translateX(calc(".concat(x, "px - 50% + 24px)) translateY(calc(").concat(y, "px - 50%  + 24px))");
+      cursor.style.transform = "translateX(calc(".concat(x, "px - 50% + 24px)) translateY(calc(").concat(y, "px - 50%  + 24px))"); // cursor.style.transform = `translateX(calc(${x}px - 50% + 24px)) translateY(calc(${y}px - 50%  + 24px))`;
     };
   }
 
@@ -25540,7 +25539,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46441" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36065" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
