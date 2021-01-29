@@ -34665,6 +34665,7 @@ html.is-animating .transition-fade {
   -webkit-box-shadow: 4px 4px 8px #8fa5b7, -4px -4px 8px #ffffff94;
           box-shadow: 4px 4px 8px #8fa5b7, -4px -4px 8px #ffffff94;
   margin-top: -1rem;
+  border: none;
 }
 
 .testimonials__owl-btn::before {
@@ -34692,6 +34693,10 @@ html.is-animating .transition-fade {
   z-index: 1;
 }
 
+.testimonials__owl-btn:hover {
+  border: none;
+}
+
 .testimonials__owl-btn:hover::before {
   opacity: 1;
 }
@@ -34699,6 +34704,7 @@ html.is-animating .transition-fade {
 .testimonials__owl-btn:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  border: none;
 }
 
 .contact {
